@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Data Pipelines</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header" class="wrapper">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1><a href="#">Databa Pipelines</a></h1>
+							<p>
+								Data pipelines are essential for data engineers to work. Here we will cover what a<br>
+								data pipeline is, what ETL and ELT mean, and have you set-up a simple pipeline in<br>
+								Azure Data Factory.
+							</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li class="current">
+									<a href="#">Modules</a>
+									<ul>
+										<li><a href="what_is_a_data_engineer.html">What is a Data Engineer</a></li>
+										<li><a href="agile_methodology.html">Agile Methodology</a></li>
+										<li><a href="python.html">Python</a></li>
+										<li><a href="sql.html">SQL</a></li>
+										<li><a href="databricks.html">Databricks</a></li>
+										<li><a href="data_architecture.html">Data Architecture</a></li>
+										<li><a href="database_modeling.html">Database Models</a></li>
+										<li><a href="pipelines.html">Data Pipelines</a></li>
+										<li><a href="data_engineer_tools.html">Data Engineering Tools</a></li>
+										<li><a href="cloud_storage_offerings.html">Cloud Storage Offerings</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Projects</a>
+									<ul>
+										<li><a href="#">Pipeline Project</a></li>
+										<li><a href="#">Capstone Project</a></li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+
+				</section>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style2">
+					<div class="title"></div>
+					<div class="container">
+
+						<!-- Content -->
+							<div id="content">
+								<article class="box post">
+									<header class="style1">
+										<h2>What is a Data Pipeline?</h2>
+										<p align="left" style="color:#545557;">
+											A data pipeline is a process of steps for moving data from one point to another while processing 
+											it. There are different kinds of data pipelines (which we will dive into later in this section). 
+											The most common are ETL and ELT pipelines. In general, a data pipeline consists of three main 
+											elements - the source, processing, and destination. Data pipelines can allow for the flow of 
+											data from an application to a data warehouse, A data lake to an analytics database, or even a 
+											data warehouse to the same data warehouse. There are also big data pipelines. The only difference 
+											being that the big data pipeline can suit big data applications. This means that it can 
+											accommodate the velocity, volume, and variety that big data produces.<br><br>
+
+											Any time a data pipeline is in use it means some kind of transformation on the data is being 
+											performed. Depending on what kind of pipeline is being utilized you may have multiple 
+											transformations occur. These transformations can be aggregations, organization, or simple 
+											moving the data itself.<br><br>
+
+											Another key step in a pipeline is a staging and mapping table. The staging table is a location 
+											for the raw data to be loaded into a table before it is modified for downstream use. The mapping 
+											table is for the pipeline to be able to ensure it is retrieving the correct source values 
+											give a key value.<br><br>
+										</p>
+										<h2>ETL</h2>
+										<p align="left" style="color:#545557;">
+											Extraction, Transformation, and Loading or ETL make up the flow of most data pipelines. In an 
+											ETL pipeline you first extract the data from the source, then transform it to meet your 
+											organizations needs, and finally load it into a place for your organizations data analyst 
+											to use. <br><br>
+
+											<img src="images/ETL.png" style="display: block; margin-right: auto; margin-left: auto;" /><br><br>
+
+											It is very common practice to have the extractions come from a transactional application, such 
+											as CRMs, ERPs, or IoTs. For example, to create a data warehouse often you are extracting data 
+											from multiple sources and combining them into a single dataset. <br><br>
+
+											During transformation, a pipeline will do the bulk of its heavy lifting. Transformations can involve 
+											cleaning (fixing inconsistencies and other input mistakes), standardizing (converting all data 
+											types to the same format), mapping (combining data elements from multiple models), augmenting 
+											(pulling data from more sources), and others. This step is critical in how effective a pipeline 
+											is as garbage in is garbage out. <br><br>
+
+											The final step, loading, is when the data is delivered to its final destination. Once the data has 
+											been loaded it is ready for production and other teams can begin modeling using the new data.<br><br>
+										<h2>ELT</h2>
+										<p align="left" style="color:#545557;">
+											Extraction, Loading, and Transformation or ELT is another popular data pipeline format. It has the 
+											same components of an ETL pipeline but is more dynamic in its content. An ELT is useful for data 
+											scientist as they can still tap into the data in a raw format.<br><br>
+	
+											<img src="images/ELT.png" style="display: block; margin-right: auto; margin-left: auto;" /><br><br>
+
+											Here you essentially just extract your data from the source and load it into your organizations 
+											database. Since the transformation occurs later, organizations can mold the data to multiple 
+											needs. It also allows for scalability and a quicker time to production.<br><br>
+
+										<h2>Exercise: Building Your First Pipeline</h2>
+										<p align="left" style="color:#545557;margin-left:40px;">
+											For this exercise we will be using Azure Data Factory or ADF to build an ETL pipeline. 
+											Follow <a href="https://www.youtube.com/watch?v=EpDkxTHAhOs&t=1049s&ab_channel=AdamMarczak-AzureforEveryone">this</a> 
+											tutorial as it lays out the steps in small, easy to digest explanations. <br><br>
+										</p>
+									</header>
+								</article>
+							</div>
+
+					</div>
+				</div>
+
+			<!-- links -->
+			<!-- left off here -->
+			<section id="highlights" class="wrapper style3">
+				<div class="title">Links</div>
+				<div class="container">
+					<div class="row aln-center">
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://www.youtube.com/watch?v=6kEGUCrBEU0&ab_channel=IBMTechnology" class="image featured"><img src="images/thumbnails/data_pipelines_explained.webp" alt="" height=180/></a>
+								<h3><a href="https://www.youtube.com/watch?v=6kEGUCrBEU0&ab_channel=IBMTechnology">Data Pipelines Explained</a></h3>
+								<p>Video by IBM Technology</p>
+								<ul class="actions">
+									<li><a href="https://www.youtube.com/watch?v=6kEGUCrBEU0&ab_channel=IBMTechnology" class="button style1">Watch Video</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://www.youtube.com/watch?v=wyn-PkJB3Lk&ab_channel=SkillCurb" class="image featured"><img src="images/thumbnails/what_is_ETL_beginners.webp" alt="" height=180/></a>
+								<h3><a href="https://www.youtube.com/watch?v=wyn-PkJB3Lk&ab_channel=SkillCurb">What is ETL for Beginners</a></h3>
+								<p>Video by SkillCurb</p>
+								<ul class="actions">
+									<li><a href="https://www.youtube.com/watch?v=wyn-PkJB3Lk&ab_channel=SkillCurb" class="button style1">Watch Video</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://www.youtube.com/watch?v=_Nk0v9qUWk4&ab_channel=KahanDataSolutions" class="image featured"><img src="images/thumbnails/ETL_v_elt.webp" alt="" height=180/></a>
+								<h3><a href="https://www.youtube.com/watch?v=_Nk0v9qUWk4&ab_channel=KahanDataSolutions">ETL vs ELT</a></h3>
+								<p>Video by Kahan Data Solutions</p>
+								<ul class="actions">
+									<li><a href="https://www.youtube.com/watch?v=_Nk0v9qUWk4&ab_channel=KahanDataSolutions" class="button style1">Watch Video</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://www.youtube.com/watch?v=EpDkxTHAhOs&t=1049s&ab_channel=AdamMarczak-AzureforEveryone" class="image featured"><img src="images/thumbnails/azure_data_factory_tutorial.webp" alt="" height=180/></a>
+								<h3><a href="https://www.youtube.com/watch?v=EpDkxTHAhOs&t=1049s&ab_channel=AdamMarczak-AzureforEveryone">Azure Data Factory Tutorial</a></h3>
+								<p>Video by Adam Marczak</p>
+								<ul class="actions">
+									<li><a href="https://www.youtube.com/watch?v=EpDkxTHAhOs&t=1049s&ab_channel=AdamMarczak-AzureforEveryone" class="button style1">Watch Video</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://www.snowflake.com/guides/data-pipeline" class="image featured"><img src="images/thumbnails/snowflake_logo.png" alt="" height=180/></a>
+								<h3><a href="https://www.snowflake.com/guides/data-pipeline">What is a Data Pipeline</a></h3>
+								<p>Article by Snowflake</p>
+								<ul class="actions">
+									<li><a href="https://www.snowflake.com/guides/data-pipeline" class="button style1">Read Article</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://www.stitchdata.com/resources/what-is-elt/" class="image featured"><img src="images/thumbnails/stitch.png" alt="" height=180/></a>
+								<h3><a href="https://www.stitchdata.com/resources/what-is-elt/">What is ELT</a></h3>
+								<p>Article by Stitch</p>
+								<ul class="actions">
+									<li><a href="https://www.stitchdata.com/resources/what-is-elt/" class="button style1">Read Article</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://www.snowflake.com/guides/what-etl" class="image featured"><img src="images/thumbnails/snowflake_logo.png" alt="" height=180/></a>
+								<h3><a href="https://www.snowflake.com/guides/what-etl">What is ETL</a></h3>
+								<p>Article by Snowflake</p>
+								<ul class="actions">
+									<li><a href="https://www.snowflake.com/guides/what-etl" class="button style1">Read Article</a></li>
+								</ul>
+							</section>
+						</div>
+						
+					</div>
+				</div>
+			</section>
+
+			<!-- footer -->
+				<section id="footer" class="wrapper style3">
+					<a href = "https://www.trudatasolutions.com/">
+						<img src="images/thumbnails/tru_data_banner.jpg" style="display: block; margin-right: auto; margin-left: auto;">
+					</a>
+						<div id="copyright">
+							<ul>
+								<li>&copy; truData Solutions.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

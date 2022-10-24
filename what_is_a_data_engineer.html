@@ -1,0 +1,213 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>What is a data engineer?</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header" class="wrapper">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1><a href="#">What is a Data Engineer?</a></h1>
+							<p>In this section we will go over the purpose of a data engineer,<br> 
+								how data engineering works, and conclude with an exercise<br>
+								to check your understanding.</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li class="current">
+									<a href="#">Modules</a>
+									<ul>
+										<li><a href="what_is_a_data_engineer.html">What is a Data Engineer</a></li>
+										<li><a href="agile_methodology.html">Agile Methodology</a></li>
+										<li><a href="python.html">Python</a></li>
+										<li><a href="sql.html">SQL</a></li>
+										<li><a href="databricks.html">Databricks</a></li>
+										<li><a href="data_architecture.html">Data Architecture</a></li>
+										<li><a href="database_modeling.html">Database Models</a></li>
+										<li><a href="pipelines.html">Data Pipelines</a></li>
+										<li><a href="data_engineer_tools.html">Data Engineering Tools</a></li>
+										<li><a href="cloud_storage_offerings.html">Cloud Storage Offerings</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Projects</a>
+									<ul>
+										<li><a href="#">Pipeline Project</a></li>
+										<li><a href="#">Capstone Project</a></li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+
+				</section>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style2">
+					<div class="title"></div>
+					<div class="container">
+
+						<!-- Content -->
+							<div id="content">
+								<article class="box post">
+									<header class="style1">
+										<h2>The Purpose of a Data Engineer</h2>
+										<p align="left" style="color:#545557;">
+											Let&#39s start with a general definition of what a data engineer is. As per 
+											<a href="https://www.cio.com/article/222004/what-is-a-data-engineer.html#:~:text=Data%20engineers%20design%2C%20build%2C%20and,applications%2C%20and%20other%20data%20consumers.">cio.com</a>: 
+											“data engineers design, build, and optimize systems for data collection, 
+											storage, access, and analytics at scale.” With that defined, why would we need a 
+											data engineer? As companies grow, they produce more data. This data needs a place 
+											to be stored for data scientists and analysts to access. This is where a data engineer 
+											comes into play. The data engineer will deploy pipelines to ensure the other branches 
+											can access the data.</p>
+										<p align="left" style="color:#545557;">
+											The general responsibility that lie with a data engineer include:
+										</p>
+										<p align="left" style="margin-left:40px;color:#545557;">
+											1. developing, constructing, and maintaining different data architectures.<br>
+											2. Aligning architectures with business needs; should you use a data warehouse, 
+											delta lake, or something else?<br>
+											3. Data acquisition<br>
+											4. Using different programming languages and tools; Python, SQL, Azure, etc.<br>
+										</p><br>
+
+										<h2>How Data Engineering Works</h2>
+										<p align="left" style="color:#545557;">
+											The general concept of how data engineering works is to take data from a source 
+											move it to a destination for analysis. <a href="https://www.youtube.com/watch?v=qWru-b6m030&t=2s&ab_channel=AltexSoft">AltexSoft</a> 
+											has an in-depth explanation as to how data engineers work. <br><br>
+
+											To break down how data engineering works, we will start with an example. 
+											On a typical team you can have a data scientist, an analyst, perhaps a marketing 
+											specialist, and a project manager. Currently, the analyst is doing a lot of heavy 
+											lifting by manually moving the datasets into Excel to create spreadsheets and 
+											dashboards. When a data set is small, this is not a huge inconvenience. 
+											However, as we add additional data to be examined it becomes more of a nuisance 
+											to manually move data from different sources. The automation of moving data from 
+											one source to another is where data engineering begins. <br><br>
+
+											This automation is called a pipeline. The most common format you will find is an 
+											<strong>E</strong>xtract <strong>T</strong>ransform <strong>E</strong>oad (<strong>ETL</strong>) 
+											pipeline. Generally, the <strong>extraction</strong> is through an API connection. Once the data is extracted, 
+											you can begin <strong>transforming</strong> it to meet business needs. Now that the data is validated and 
+											formatted correctly, we can <strong>load</strong> it into a database.<br><br>
+											<a href="#" class="image featured">
+												<img src="images/etl_pipeline_diagram.png" alt="" />
+											</a>
+
+											Another process data engineers must be comfortable with is data warehousing. This is the place 
+											that all the central data is stored and organized. Now, this warehouse concept just sounds 
+											like a database. However, the purpose of a warehouse is that it will be optimized to run 
+											complex analytical queries as opposed to simple transactional queries like a database would. <br><br>
+
+											Data engineers also often work closely with data scientist. When a request to a data scientist 
+											has been made to predict a future outcome, it becomes the responsibility of the data engineer 
+											to create a custom pipeline for the scientist. A custom pipeline is often needed as the 
+											request is usually a one-off task.
+										</p><br><br>
+
+										<h2>Exercise: What is a Data Engineer?</h2>
+										<p align="left" style="color:#545557;">
+											Find a place you will be keeping track of all your work. In that area, please save all 
+											the work you do during this internship for future reference. Some examples that have 
+											been used in the past are <a href="https://miro.com/signup/">Miro</a>, <a href="https://drive.google.com">Google Drive</a>, and <a href="https://github.com">GitHub</a>. 
+											In a paragraph or two describe what the purpose is of a data engineer and create a diagram demonstrating their workflow.
+										</p>
+									</header>
+								</article>
+							</div>
+
+					</div>
+				</div>
+
+			<!-- links -->
+				<section id="highlights" class="wrapper style3">
+					<div class="title">Links</div>
+					<div class="container">
+						<div class="row aln-center">
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="https://www.youtube.com/watch?v=qWru-b6m030&t=2s&ab_channel=AltexSoft" class="image featured"><img src="images/thumbnails/how_data_engineering_works_altexsoft.webp" alt="" /></a>
+									<h3><a href="https://www.youtube.com/watch?v=qWru-b6m030&t=2s&ab_channel=AltexSoft">How Data Engineering Works</a></h3>
+									<p>Video by AltexSoft</p>
+									<ul class="actions">
+										<li><a href="https://www.youtube.com/watch?v=qWru-b6m030&t=2s&ab_channel=AltexSoft" class="button style1">Watch Video</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="https://www.youtube.com/watch?v=D1V6t--9tt8&ab_channel=SeattleDataGuy" class="image featured"><img src="images/thumbnails/what_is_a_data_engineer_seattle_data_guy.webp" alt="" /></a>
+									<h3><a href="https://www.youtube.com/watch?v=D1V6t--9tt8&ab_channel=SeattleDataGuy">What is a Data Engineer</a></h3>
+									<p>Video by Seattle Data Guy</p>
+									<ul class="actions">
+										<li><a href="https://www.youtube.com/watch?v=D1V6t--9tt8&ab_channel=SeattleDataGuy" class="button style1">Watch Video</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="row aln-center">
+								<div class="col-4 col-12-medium">
+									<section class="highlight">
+										<a href="https://quanthub.com/what-is-data-engineering/" class="image featured"><img src="images/thumbnails/quanthub_logo.webp" alt="" /></a>
+										<h3><a href="https://quanthub.com/what-is-data-engineering/">What is Data Engineering?</a></h3>
+										<p>Article by quanthub</p>
+										<ul class="actions">
+											<li><a href="https://quanthub.com/what-is-data-engineering/" class="button style1">Read Article</a></li>
+										</ul>
+									</section>
+								</div>
+								<div class="col-4 col-12-medium">
+									<section class="highlight">
+										<a href="https://www.dremio.com/resources/guides/intro-data-engineering/" class="image featured"><img src="images/thumbnails/dremio_logo_1.jpg" alt="" /></a>
+										<h3><a href="https://www.dremio.com/resources/guides/intro-data-engineering/">Introduction to Data Engineering</a></h3>
+										<p>Article by dremio</p>
+										<ul class="actions">
+											<li><a href="https://www.dremio.com/resources/guides/intro-data-engineering/" class="button style1">Read Article</a></li>
+										</ul>
+									</section>
+								</div>
+							
+						</div>
+					</div>
+				</section>
+
+			<!-- footer -->
+				<section id="footer" class="wrapper style3">
+					<a href = "https://www.trudatasolutions.com/">
+						<img src="images/thumbnails/tru_data_banner.jpg" style="display: block; margin-right: auto; margin-left: auto;">
+					</a>
+						<div id="copyright">
+							<ul>
+								<li>&copy; truData Solutions.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Data Engineering Tools</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header" class="wrapper">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1><a href="#">Data Engineering Tools</a></h1>
+							<p>
+								Data engineers use multiple tools. In this section, we will touch upon the most common <br>
+								tools used and build an end-to-end pipeline.
+							</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li class="current">
+									<a href="#">Modules</a>
+									<ul>
+										<li><a href="what_is_a_data_engineer.html">What is a Data Engineer</a></li>
+										<li><a href="agile_methodology.html">Agile Methodology</a></li>
+										<li><a href="python.html">Python</a></li>
+										<li><a href="sql.html">SQL</a></li>
+										<li><a href="databricks.html">Databricks</a></li>
+										<li><a href="data_architecture.html">Data Architecture</a></li>
+										<li><a href="database_modeling.html">Database Models</a></li>
+										<li><a href="pipelines.html">Data Pipelines</a></li>
+										<li><a href="data_engineer_tools.html">Data Engineering Tools</a></li>
+										<li><a href="cloud_storage_offerings.html">Cloud Storage Offerings</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Projects</a>
+									<ul>
+										<li><a href="#">Pipeline Project</a></li>
+										<li><a href="#">Capstone Project</a></li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+
+				</section>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style2">
+					<div class="title"></div>
+					<div class="container">
+
+						<!-- Content -->
+							<div id="content">
+								<article class="box post">
+									<header class="style1">
+										<h2>Azure</h2>
+										<p align="left" style="color:#545557;">
+											Azure is Microsoft&#39s cloud computing suite of tools. It is commonly used for hosting 
+											databases in the cloud, but it also offers many other tools such as DevOps for project 
+											management, containers, migration, and so much more.<br><br>
+										</p>
+										<p align="left" style="margin-left:40px;color:#545557;">
+											<strong>Azure Data Factory (ADF)</strong><br>
+											ADF is a cloud ETL/ELT tool that offers a code free environment to build data pipelines. 
+											It also supports multiple different database platforms such as Hadoop, Salesforce, 
+											Oracle, and many more.<br><br>
+
+											<strong>Azure Blob Storage</strong><br>
+											Blob storage is an object storage for the cloud that is optimized for storing large 
+											amounts of unstructured data. This storage option is excellent for implementing data 
+											lakes as it is very scalable and cost effective.<br><br>
+
+											<strong>Linked Service</strong><br>
+											Linked services is a connection between an internal and external resource. This is 
+											a key value pair that allows your pipeline to connect to a dataset and map it to 
+											where it needs to be placed. <br><br>
+
+											<strong>Pipeline</strong><br>
+											Pipeline is where you define the transformations being performed on the data. You 
+											can copy data, create a look-up, conditional activities, and many others.<br><br>
+										</p><br>
+										
+										<h2>Amazon Web Services (AWS)</h2>
+										<p align="left" style="color:#545557;">
+											AWS is Amazons cloud computing suite of tools. One highlight of this service compared 
+											to others is the pay-as-you-go basis it is built on. Using AWS, you can build ETL/ELT 
+											pipelines in a code environment.<br><br>
+
+										<p align="left" style="margin-left:40px;color:#545557;">
+											<strong>Elastic Computing (EC2)</strong><br>
+											EC2 is Amazons offering for renting virtual computers on which companies can run the 
+											AWS suite of tools on. On EC2, all the computer hardware is virtual meaning it can 
+											be run from anywhere.<br><br>
+	
+											<strong>Lambda</strong><br>
+											Lambda is an event-driven computing platform. It runs code in response to events and 
+											automatically manages the computing resources required by the code. This can be used 
+											to ingest code as well as transform it.<br><br>
+	
+											<strong>Simple Storage Solution (S3)</strong><br>
+											An S3 bucket is a cloud object storage that stores objects within a bucket. Buckets 
+											are extremely scalable and inexpensive making it a good choice to store all types 
+											of data.<br><br>
+	
+											<strong>Amazon Relational Database Service</strong><br>
+											ARDS is a relational database running in the cloud. If offers simplistic set-up, 
+											operation, and scaling for use with other applications. You can query data with 
+											many different querying languages including but not limited to Amazon Aurora, 
+											MySQL, and Microsoft SQL Server.<br><br>
+
+											<strong>DynamoDB</strong><br>
+											Dynamo DB is a proprietary NoSQL database service that supports key-value 
+											pairs and document data structures. <br><br>
+
+											<strong>Glue</strong><br>
+											Glue is an event-driven computing platform that runs code in response to events. 
+											It is used in place of Lambda if you have very large amounts of data being processed.<br><br>
+
+											<strong>Redshift</strong><br>
+											Redshift is a data warehouse product. It is optimized for handling large scale data 
+											sets and data migrations. It also supports analytics making it quick and easy to 
+											produce analytics at scale.<br><br>
+										</p><br>
+
+										<h2>Google Cloud Platform (GCP)</h2>
+										<p align="left" style="color:#545557;">
+											GCP is Googles cloud offering for data tools. It is not as popular as AWS or Azure 
+											yet but has shown tremendous growth over the last few years. Just like with the 
+											other two competitors, you can build ETL/ELT pipelines using Googles web applications. 
+											In GCP you can build pipelines on the command line using google cloud shell or code-free.<br><br>
+
+										<p align="left" style="margin-left:40px;color:#545557;">
+											<strong>Dataflow</strong><br>
+											Dataflow is a service for executing several different data processing patterns. It is 
+											a pipeline tool that allows for both batch and streaming data. Dataflow is a ETL tool. 
+											For ELT pipelines you will need to use a different GCP tool.<br><br>
+	
+											<strong>BigQuery</strong><br>
+											BigQuery is an enterprise data warehouse that is built for machine learning, geospatial 
+											analysis, and business intelligence. It is capable of both ETL and ELT.<br><br>
+	
+											<strong>Storage</strong><br>
+											Storage is a service for storing you objects in Google Cloud. It is very similar 
+											to Amazon S3 as objects are stored in buckets.<br><br>
+	
+											<strong>Composer</strong><br>
+											Composer allows users to author, schedule, and monitor pipelines. It is built on Apache 
+											Airflow and is optimized for batch workflows. It allows for a code interface in python 
+											to manage your pipelines.<br><br>
+										</p><br>
+									</header>
+								</article>
+							</div>
+
+					</div>
+				</div>
+
+			<!-- links -->
+			<!-- left off here -->
+			<section id="highlights" class="wrapper style3">
+				<div class="title">Azure Links</div>
+				<div class="container">
+					<div class="row aln-center">
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://www.techtarget.com/searchcloudcomputing/definition/Windows-Azure" class="image featured"><img src="images/thumbnails/techtarget.png" alt="" height=180/></a>
+								<h3><a href="https://www.techtarget.com/searchcloudcomputing/definition/Windows-Azure">What is Azure</a></h3>
+								<p>Article by Techtarget</p>
+								<ul class="actions">
+									<li><a href="https://www.techtarget.com/searchcloudcomputing/definition/Windows-Azure" class="button style1">Read Article</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://learn.microsoft.com/en-us/azure/data-factory/introduction" class="image featured"><img src="images/thumbnails/microsoft.png" alt="" height=180/></a>
+								<h3><a href="https://learn.microsoft.com/en-us/azure/data-factory/introduction">What is ADF</a></h3>
+								<p>Documentation by Mircosoft</p>
+								<ul class="actions">
+									<li><a href="https://learn.microsoft.com/en-us/azure/data-factory/introduction" class="button style1">Read Documentation</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction" class="image featured"><img src="images/thumbnails/microsoft.png" alt="" height=180/></a>
+								<h3><a href="https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction">What is Blob Storage</a></h3>
+								<p>Documentation by Mircosoft</p>
+								<ul class="actions">
+									<li><a href="https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction" class="button style1">Read Documentation</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://learn.microsoft.com/en-us/azure/data-factory/concepts-linked-services?tabs=data-factory" class="image featured"><img src="images/thumbnails/microsoft.png" alt="" height=180/></a>
+								<h3><a href="https://learn.microsoft.com/en-us/azure/data-factory/concepts-linked-services?tabs=data-factory">What is Linked Service</a></h3>
+								<p>Documentation by Mircosoft</p>
+								<ul class="actions">
+									<li><a href="https://learn.microsoft.com/en-us/azure/data-factory/concepts-linked-services?tabs=data-factory" class="button style1">Read Documentation</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops" class="image featured"><img src="images/thumbnails/microsoft.png" alt="" height=180/></a>
+								<h3><a href="https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops">What is Pipelines</a></h3>
+								<p>Documentation by Mircosoft</p>
+								<ul class="actions">
+									<li><a href="https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops" class="button style1">Read Documentation</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://learn.microsoft.com/en-us/azure/data-factory/concepts-pipelines-activities?tabs=data-factory" class="image featured"><img src="images/thumbnails/microsoft.png" alt="" height=180/></a>
+								<h3><a href="https://learn.microsoft.com/en-us/azure/data-factory/concepts-pipelines-activities?tabs=data-factory">What is Pipeline Activities</a></h3>
+								<p>Documentation by Mircosoft</p>
+								<ul class="actions">
+									<li><a href="https://learn.microsoft.com/en-us/azure/data-factory/concepts-pipelines-activities?tabs=data-factory" class="button style1">Read Documentation</a></li>
+								</ul>
+							</section>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- links -->
+			<!-- left off here -->
+			<section id="highlights" class="wrapper style3">
+				<div class="title">AWS Links</div>
+				<div class="container">
+					<div class="row aln-center">
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://aws.amazon.com/ec2/" class="image featured"><img src="images/thumbnails/aws.webp" alt="" height=180/></a>
+								<h3><a href="https://aws.amazon.com/ec2/">AWS EC2</a></h3>
+								<p>Documentation by Amazon</p>
+								<ul class="actions">
+									<li><a href="https://aws.amazon.com/ec2/" class="button style1">Read Documentation</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://aws.amazon.com/lambda/" class="image featured"><img src="images/thumbnails/aws.webp" alt="" height=180/></a>
+								<h3><a href="https://aws.amazon.com/lambda/">AWS Lambda</a></h3>
+								<p>Documentation by Amazon</p>
+								<ul class="actions">
+									<li><a href="https://aws.amazon.com/lambda/" class="button style1">Read Documentation</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://aws.amazon.com/s3/" class="image featured"><img src="images/thumbnails/aws.webp" alt="" height=180/></a>
+								<h3><a href="https://aws.amazon.com/s3/">AWS S3</a></h3>
+								<p>Documentation by Amazon</p>
+								<ul class="actions">
+									<li><a href="https://aws.amazon.com/s3/" class="button style1">Read Documentation</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://aws.amazon.com/rds/" class="image featured"><img src="images/thumbnails/aws.webp" alt="" height=180/></a>
+								<h3><a href="https://aws.amazon.com/rds/">AWS RDS</a></h3>
+								<p>Documentation by Amazon</p>
+								<ul class="actions">
+									<li><a href="https://aws.amazon.com/rds/" class="button style1">Read Documentation</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://aws.amazon.com/dynamodb/" class="image featured"><img src="images/thumbnails/aws.webp" alt="" height=180/></a>
+								<h3><a href="https://aws.amazon.com/dynamodb/">AWS DynamoDB</a></h3>
+								<p>Documentation by Amazon</p>
+								<ul class="actions">
+									<li><a href="https://aws.amazon.com/dynamodb/" class="button style1">Read Documentation</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://aws.amazon.com/glue/" class="image featured"><img src="images/thumbnails/aws.webp" alt="" height=180/></a>
+								<h3><a href="https://aws.amazon.com/glue/">AWS Glue</a></h3>
+								<p>Documentation by Amazon</p>
+								<ul class="actions">
+									<li><a href="https://aws.amazon.com/glue/" class="button style1">Read Documentation</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://aws.amazon.com/redshift/" class="image featured"><img src="images/thumbnails/aws.webp" alt="" height=180/></a>
+								<h3><a href="https://aws.amazon.com/redshift/">AWS Redshift</a></h3>
+								<p>Documentation by Amazon</p>
+								<ul class="actions">
+									<li><a href="https://aws.amazon.com/redshift/" class="button style1">Read Documentation</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://www.youtube.com/watch?v=qMeyiwveS3A&t=103s&ab_channel=AmazonWebServices" class="image featured"><img src="images/thumbnails/pipelines_on_aws.webp" alt="" height=180/></a>
+								<h3><a href="https://www.youtube.com/watch?v=qMeyiwveS3A&t=103s&ab_channel=AmazonWebServices">Building ETL Pipelines on AWS</a></h3>
+								<p>Video by Amazon Web Services</p>
+								<ul class="actions">
+									<li><a href="https://www.youtube.com/watch?v=qMeyiwveS3A&t=103s&ab_channel=AmazonWebServices" class="button style1">Watch Video</a></li>
+								</ul>
+							</section>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- links -->
+			<!-- left off here -->
+			<section id="highlights" class="wrapper style3">
+				<div class="title">GCP Links</div>
+				<div class="container">
+					<div class="row aln-center">
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://cloud.google.com/dataflow" class="image featured"><img src="images/thumbnails/gcp.webp" alt="" height=180/></a>
+								<h3><a href="https://cloud.google.com/dataflow">GCP Dataflow</a></h3>
+								<p>Documnetation by Google</p>
+								<ul class="actions">
+									<li><a href="https://cloud.google.com/dataflow" class="button style1">Read Documentaion</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://cloud.google.com/bigquery" class="image featured"><img src="images/thumbnails/gcp.webp" alt="" height=180/></a>
+								<h3><a href="https://cloud.google.com/bigquery">GCP BigQuery</a></h3>
+								<p>Documnetation by Google</p>
+								<ul class="actions">
+									<li><a href="https://cloud.google.com/bigquery" class="button style1">Read Documentaion</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://cloud.google.com/storage" class="image featured"><img src="images/thumbnails/gcp.webp" alt="" height=180/></a>
+								<h3><a href="https://cloud.google.com/storage">GCP Storage</a></h3>
+								<p>Documnetation by Google</p>
+								<ul class="actions">
+									<li><a href="https://cloud.google.com/storage" class="button style1">Read Documentaion</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://cloud.google.com/composer" class="image featured"><img src="images/thumbnails/gcp.webp" alt="" height=180/></a>
+								<h3><a href="https://cloud.google.com/composer">GCP Composer</a></h3>
+								<p>Documnetation by Google</p>
+								<ul class="actions">
+									<li><a href="https://cloud.google.com/composer" class="button style1">Read Documentaion</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://www.youtube.com/watch?v=yVUXvabnMRU&ab_channel=GoogleCloudTech" class="image featured"><img src="images/thumbnails/pipeline_on_gcp.webp" alt="" height=180/></a>
+								<h3><a href="https://www.youtube.com/watch?v=yVUXvabnMRU&ab_channel=GoogleCloudTech">Building a Pipeline with Google Cloud</a></h3>
+								<p>Video by Google Cloud Tech</p>
+								<ul class="actions">
+									<li><a href="https://www.youtube.com/watch?v=yVUXvabnMRU&ab_channel=GoogleCloudTech" class="button style1">Watch Video</a></li>
+								</ul>
+							</section>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- footer -->
+				<section id="footer" class="wrapper style3">
+					<a href = "https://www.trudatasolutions.com/">
+						<img src="images/thumbnails/tru_data_banner.jpg" style="display: block; margin-right: auto; margin-left: auto;">
+					</a>
+						<div id="copyright">
+							<ul>
+								<li>&copy; truData Solutions.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

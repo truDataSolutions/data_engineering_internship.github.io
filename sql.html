@@ -1,0 +1,367 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>SQL</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header" class="wrapper">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1><a href="#">SQL</a></h1>
+							<p>
+								In this section we will cover SQL, a way to interact with a database to retrieve data
+                            </p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li class="current">
+									<a href="#">Modules</a>
+									<ul>
+										<li><a href="what_is_a_data_engineer.html">What is a Data Engineer</a></li>
+										<li><a href="agile_methodology.html">Agile Methodology</a></li>
+										<li><a href="python.html">Python</a></li>
+										<li><a href="sql.html">SQL</a></li>
+										<li><a href="databricks.html">Databricks</a></li>
+										<li><a href="data_architecture.html">Data Architecture</a></li>
+										<li><a href="database_modeling.html">Database Models</a></li>
+										<li><a href="pipelines.html">Data Pipelines</a></li>
+										<li><a href="data_engineer_tools.html">Data Engineering Tools</a></li>
+										<li><a href="cloud_storage_offerings.html">Cloud Storage Offerings</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Projects</a>
+									<ul>
+										<li><a href="#">Pipeline Project</a></li>
+										<li><a href="#">Capstone Project</a></li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+
+				</section>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style2">
+					<div class="title"></div>
+					<div class="container">
+
+						<!-- Content -->
+							<div id="content">
+								<article class="box post">
+									<header class="style1">
+										<p align="left" style="color:#545557;">
+											Structured Query Language or SQL has been around since the 1970s and is the most popular tool amongst all 
+											data engineers regardless of where they work. There are several different kinds of SQL. The original being 
+											MySQL. Once MySQL was bought by Oracle in 2010, the original creator started MariaDB, essentially open-source 
+											SQL. Microsoft has their own version of SQL which is SqlServer. There is also Oracle (different than MySQL) 
+											which is the most powerful but also most expensive. The last main player in the SQL space is Postgresql. 
+											This has more features than MySQL but not as user friendly. In this section, we will go over some basic SQL, 
+											more advanced functions, and finish with setting up a database.</p><br>
+										<h2>Basic SQL</h2> 
+										<p align="left" style="color:#545557;">
+											<strong>SELECT, FROM, WHERE</strong><br><br>
+
+											Across all versions of SQL there is a general syntax to follow to begin querying. There is a SELECT statement 
+											(what you want to select from the data), a FROM statement (what dataset you want to query from), and a WHERE 
+											statement (criteria for filtering the data). Something to note would be that you do not require a WHERE statement, 
+											but you must always have a SELECT and FROM statement.<br><br>
+
+											<img src="images/select_from_where.png" style="display: block; margin-right: auto; margin-left: auto;"><br>
+
+											As stated before, the WHERE clause is optional. It is predominantly used for filtering the data. 
+											You can use a multitude of operations in the WHERE clause such as logic statements (AND, OR), a 
+											filter statement (“=”, “!=”, etc.), and range statements (BETWEEN, LIKE, IN).<br><br>
+
+											<img src="images/sql_first_query.png" style="display: block; margin-right: auto; margin-left: auto;"><br>
+
+											Try guessing what the statement above would return. What we just queried is as follows, select the first and 
+											last name from the student&#39s data set where they are over 20 years old, and they are a male.
+
+											<strong>Creating and Inserting Data</strong><br><br>
+
+											Another fundamental task in SQL is creating a dataset and inserting data. The CREATE TABLE statement is 
+											straightforward in how it is implemented. After the main statement, you wrap your column names and data 
+											type for those columns in brackets. The best practice is to choose the datatype that fits the data best 
+											(i.e., don&#39t make an integer a varchar or string).<br><br>
+
+											<img src="images/sql_create_table.png" style="display: block; margin-right: auto; margin-left: auto;"><br>
+
+											In the students table created above, we have a few different data types. student_id and age are both integer 
+											data type. This datatype does not have to be pre-defined in size. We also have this other datatype varchar as 
+											well as char. Char is used when you have a predefined length of input. Varchar is used when the input can vary 
+											in length. Since we know the sex can only be “M” or “F” in this dataset, we can define the char as length of 1. 
+											A name can vary and thus we use a varchar to ensure no values are dropped. You can also notice that we have an 
+											AUTO_INCREMENT, NOT_NULL, and PRIMARY KEY statement on student_id. The AUTO_INCREMENT says that student_id 
+											will start at 1 and with each entry increment the number by 1. NOT_NULL means this value cannot be null. 
+											Setting a PRIMARY KEY is important on any table. This ensures that the value cannot be null, must be unique 
+											(cannot hold a duplicate value), and allows other tables to connect to this table through FOREIGN KEYS.<br><br>
+
+											Now we will look at inserting data into a table. To insert, you need the target table, the target columns, and 
+											the values you want to insert. You can insert data without defining which columns to and in this case, you have 
+											two options. If you are inserting data into ALL the columns in the dataset you just need to ensure you are placing 
+											the values in the same order as they appear. Otherwise, if you are only inserting into a single column, the rest of 
+											the columns will appear as null.<br><br>
+
+											<img src="images/sql_insert_data.png" style="display: block; margin-right: auto; margin-left: auto;"><br>
+
+											If you notice in all the examples, we did not have to enter a student_id. This is because SQL is smart enough to do 
+											the calculation for use since we implemented an AUTO_INCREMENT. The first example is a full entry without specifying 
+											column names. The second example accomplishes the same as the first however we specified the order and column names 
+											being targeted. An important note about this example is that you can have your columns out of order on insertion 
+											(i.e., if first_name is the first column in your table) as long as you insert the first name into the correlated place 
+											you defined on your insert statement it will find the correct column to be inserted on. Our last example is inserting 
+											only on specific columns. Here we only have a last_name and age. This means first_name and sex will appear as null in 
+											the table.
+                                        </p><br>
+										<h2>Advanced SQL</h2>
+										<p align="left" style="color:#545557;">
+											The basics of SQL are great, but we will need a few other tools at our deposal if 
+											we really want to be an efficient Data Engineer. Here we will go over JOINS, Common Table Expressions (CTEs), and Window 
+											Functions.
+										</p><br>
+                                        <p align="left" style="color:#545557;"><strong>JOINS</strong></p>
+                                        <p align="left" style="color:#545557;">
+                                            JOINS are useful as they allow us to combine tables together. In general, we won&#39t always have all our data in a single table. 
+											There are a few different kinds of JOINS. A normal JOIN or INNER JOIN combines two or more tables based on a related column. 
+											A LEFT JOIN returns all entries from the left table and the matches from the right table. A RIGHT JOIN is the opposite of a 
+											left join where it will return all entries from the right table and matched records from the left table. A FULL JOIN will 
+											return all entries regardless of a match.<br><br>
+
+											<img src="images/sql_joins.png" style="display: block; margin-right: auto; margin-left: auto;"><br>
+
+											Here we have name set to “Your Name Here”. Now if we wanted to print “Your Name Here”, instead of 
+											typing it out every time we can just call print on the variable “name”. Variables are not limited 
+											to string type objects. In fact, you can store any Python data type in one. Variables are also 
+											stored in memory which assists with ease of access. String variables can be declared with single 
+											quotes () or double quotes (“), in this example we used double quotes. Lastly, variables are 
+											case sensitive. This means that if you have a variables “A” and another variables “a”, they 
+											will not overwrite each other.<br><br>
+
+											<img src="images/sql_join_std_addr.png" style="display: block; margin-right: auto; margin-left: auto;"><br>
+
+											See how we added an “s” in front of all the column names. This allows SQL to know which table we are pulling information from. 
+											The reason for this is once we begin joining tables often there is a column that will match between both tables. Thus, by 
+											giving an abbreviation we know which table we are referencing.<br><br>
+
+											<strong>Common Table Expresssion (CTE)</strong><br><br>
+
+											Common Table Expressions or CTEs for short are extremely useful as they are temporary tables that you can reference with another 
+											SELECT, INSERT, UPDATE, or DELETE statement. The reason this is so important is that we can perform table calculations without 
+											altering our original table. Another common case for CTEs is their use of recursion. The “Hello World” or a recursive CTE would 
+											be displaying an employee hierarchy.<br><br>
+
+											<img src="images/sql_cte_syntax.png" style="display: block; margin-right: auto; margin-left: auto;"><br>
+
+											Before proceeding, try writing a query that will give you the managers name for each employee. Your table should have an employee id 
+											which is the primary key, name, and manager id all with the corresponding datatype. Insert at least 10 employees into the table.<br><br>
+
+											In the example below, we have a query that will give you the employees table and a new column called &#39manager_name&#39 which is the employees 
+											direct manager.<br><br>
+
+											<img src="images/sql_join_mngr_emp.png" style="display: block; margin-right: auto; margin-left: auto;"><br>
+
+											If we make a CTE, we can get the full hierarchy path rather than just the direct manager. Again, before proceeding try this on your own. 
+											See if you can write a CTE that will give you the FULL hierarchy for each employee. This means that if Ryan reports to Robert and Robert 
+											reports to Ken, at Roberts level we will only show him reporting to Ken, but at Ryans level we will see him reporting to Robert 
+											followed by Ken.<br><br>
+
+											<a href="images/sql_recursive_mngr.png">Answer to recursive manager</a><br><br>
+
+											The output of the CTE gives us a new column called &#39reports_to&#39 which gives up a path on employee hierarchy. Our non-recursive query 
+											gives us the first level of the branch (i.e., where to start). The recursive query then builds off the non-recursive branch until all 
+											employees have been put on a path.<br><br>
+
+											<strong>Window Functions</strong><br><br>
+
+											Window Functions are useful as they allow aggregation over a column as well as allow for partitioning. This means that if you need to do an aggregation, 
+											but also have the aggregation separated out by a group you can.<br><br>
+
+											The functions of window functions are SUM, COUNT, AVERAGE, MAX, MIN, RANK, DENSE_RANK, and ROW_NUMBER.<br><br>
+
+											SUM, COUNT, AVERAGE, MAX, and MIN are all aggregation functions. They will do exactly what you would expect on them. Each will do their respective 
+											calculation over the partition. RANK will assign a rank to each row in the partition. DENSE_RANK is similar to RANK, however there are no repetitions 
+											in a partition. If two columns have the same value, DENSE_RANK will increment the second value rather than give it the same rank. ROW_NUMBER 
+											assigns consecutive row numbers in a partition. No two rows can have the same row number.<br><br>
+
+											<img src="images/sql_WF_syntax.PNG" style="display: block; margin-right: auto; margin-left: auto;"><br>
+
+											As seen from the example above, the syntax for window functions is simple. You start by selecting your target columns. You then specify the window 
+											function and what it will do. The partition and order by clause are not required, but typically if you are using a window function the point is 
+											to partition something. Partitioning allows you to separate your aggregation into groups. An example would be that you want to get the average 
+											salary by department at a company. In this case we could partition by department. Lastly you select the target table you want to 
+											pull information from.<br><br>
+
+											<img src="images/sql_wf_rank.png" style="display: block; margin-right: auto; margin-left: auto;"><br>
+
+
+                                        </p>
+										<h2>Exercise: Leetcode Databases</h2>
+										<p align="left" style="color:#545557;">
+											Below are a list of <a href="https://leetcode.com/">Leetcode</a> questions that will allow you to progress your skills in SQL. 
+											They are in order from easiest to hardest. You don&#39t have to finish all these problems in on sitting. We would suggest 
+											working through one a dat over the course of your internship.
+										</p><br>
+										<p align="left" style="color:#545557; margin-left:40px;">
+											1. <a href="https://leetcode.com/problems/game-play-analysis-i/">Game Play Analysis I</a><br>
+											2. <a href="https://leetcode.com/problems/combine-two-tables/">Combine Two Tables</a><br>
+											3. <a href="https://leetcode.com/problems/duplicate-emails/">Duplicate Emails</a><br>
+											4. <a href="https://leetcode.com/problems/classes-more-than-5-students/">Classes More Than 5 Students</a><br>
+											5. <a href="https://leetcode.com/problems/consecutive-numbers/">consecutive Numbers</a>
+										</p>
+									</header>
+								</article>
+							</div>
+
+					</div>
+				</div>
+
+			<!-- links -->
+				<section id="highlights" class="wrapper style3">
+					<div class="title">Links</div>
+					<div class="container">
+						<div class="row aln-center">
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="https://www.youtube.com/watch?v=zbMHLJ0dY4w&ab_channel=edureka%21" class="image featured"><img src="images/thumbnails/sql_basics_edureka!.webp" alt="" height=180/></a>
+									<h3><a href="https://www.youtube.com/watch?v=zbMHLJ0dY4w&ab_channel=edureka%21">SQL Basics for Beginners</a></h3>
+									<p>Video by edureka!</p>
+									<ul class="actions">
+										<li><a href="https://www.youtube.com/watch?v=zbMHLJ0dY4w&ab_channel=edureka%21" class="button style1">Watch Video</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="https://www.youtube.com/watch?v=QNfnuK-1YYY&ab_channel=techTFQ" class="image featured"><img src="images/thumbnails/sql_with_clause.webp" alt="" height=180/></a>
+									<h3><a href="https://www.youtube.com/watch?v=QNfnuK-1YYY&ab_channel=techTFQ">SQL WITH Clause</a></h3>
+									<p>Video by techTFQ</p>
+									<ul class="actions">
+										<li><a href="https://www.youtube.com/watch?v=QNfnuK-1YYY&ab_channel=techTFQ" class="button style1">Watch Video</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="https://www.youtube.com/watch?v=Ww71knvhQ-s&ab_channel=techTFQ" class="image featured"><img src="images/thumbnails/sql_window_function.webp" alt="" height=180/></a>
+									<h3><a href="https://www.youtube.com/watch?v=Ww71knvhQ-s&ab_channel=techTFQ">SQL Window Function</a></h3>
+									<p>Video by techTFQ</p>
+									<ul class="actions">
+										<li><a href="https://www.youtube.com/watch?v=Ww71knvhQ-s&ab_channel=techTFQ" class="button style1">Watch Video</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="https://www.techtarget.com/searchdatamanagement/definition/SQL#:~:text=Structured%20Query%20Language%20(SQL)%20is,on%20the%20data%20in%20them." class="image featured"><img src="images/thumbnails/tt_logo.jpg" height=180/></a>
+									<h3><a href="https://www.techtarget.com/searchdatamanagement/definition/SQL#:~:text=Structured%20Query%20Language%20(SQL)%20is,on%20the%20data%20in%20them.">What is SQL</a></h3>
+									<p>Article by techTarget</p>
+									<ul class="actions">
+										<li><a href="https://www.techtarget.com/searchdatamanagement/definition/SQL#:~:text=Structured%20Query%20Language%20(SQL)%20is,on%20the%20data%20in%20them." class="button style1">Read Article</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="https://www.khanacademy.org/computing/computer-programming/sql" class="image featured"><img src="images/thumbnails/Khan_Logo.png" alt="" height=180/></a>
+									<h3><a href="https://www.khanacademy.org/computing/computer-programming/sql">Intro to SQL</a></h3>
+									<p>Course by Khan Academy</p>
+									<ul class="actions">
+										<li><a href="https://www.khanacademy.org/computing/computer-programming/sql" class="button style1">Learn Code</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="https://www.geeksforgeeks.org/mysql-recursive-cte-common-table-expressions/" class="image featured"><img src="images/thumbnails/geeksforgeeks-19.jpg" alt="" height="180" /></a>
+									<h3><a href="https://www.geeksforgeeks.org/mysql-recursive-cte-common-table-expressions/">Recursive CTE</a></h3>
+									<p>Online resource from Geeks for Geeks</p>
+									<ul class="actions">
+										<li><a href="https://www.geeksforgeeks.org/mysql-recursive-cte-common-table-expressions/" class="button style1">Read Article</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="https://www.geeksforgeeks.org/window-functions-in-sql/" class="image featured"><img src="images/thumbnails/geeksforgeeks-19.jpg" alt="" height="180" /></a>
+									<h3><a href="https://www.geeksforgeeks.org/window-functions-in-sql/">Window Functions</a></h3>
+									<p>Online resource from Geeks for Geeks</p>
+									<ul class="actions">
+										<li><a href="https://www.geeksforgeeks.org/window-functions-in-sql/" class="button style1">Read Article</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="https://dev.mysql.com/doc/" class="image featured"><img src="images/thumbnails/mySQL_logo.webp" height="180" /></a>
+									<h3><a href="https://dev.mysql.com/doc/">MySQL</a></h3>
+									<p>Official Documentation for MySQL</p>
+									<ul class="actions">
+										<li><a href="https://dev.mysql.com/doc/" class="button style1">Read Documentation</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="https://www.postgresql.org/docs/" class="image featured"><img src="images/thumbnails/postgres-logo.png" height="180" /></a>
+									<h3><a href="https://www.postgresql.org/docs/">PostgreSQL</a></h3>
+									<p>Official Documentation for PostgreSQL</p>
+									<ul class="actions">
+										<li><a href="https://www.postgresql.org/docs/" class="button style1">Read Documentation</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="https://mariadb.com/kb/en/documentation/" class="image featured"><img src="images/thumbnails/mariadb-logo.png" height="180" /></a>
+									<h3><a href="https://mariadb.com/kb/en/documentation/">MariaDB</a></h3>
+									<p>Official Documentation for MariaDB</p>
+									<ul class="actions">
+										<li><a href="https://mariadb.com/kb/en/documentation/" class="button style1">Read Documentation</a></li>
+									</ul>
+								</section>
+							</div>
+							
+						</div>
+					</div>
+				</section>
+
+			<!-- footer -->
+				<section id="footer" class="wrapper style3">
+					<a href = "https://www.trudatasolutions.com/">
+						<img src="images/thumbnails/tru_data_banner.jpg" style="display: block; margin-right: auto; margin-left: auto;">
+					</a>						<div id="copyright">
+							<ul>
+								<li>&copy; truData Solutions.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

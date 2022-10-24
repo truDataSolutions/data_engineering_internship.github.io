@@ -1,0 +1,358 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Python</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header" class="wrapper">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1><a href="#">Python</a></h1>
+							<p>
+                                Python is a programming language that is useful for data processing and manipulation.<br>
+								In this section we will go over how data engineers use Python, the basics (loops, variables,<br>
+								calculations), important libraries, and data ingestion and manipulation.
+                            </p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li class="current">
+									<a href="#">Modules</a>
+									<ul>
+										<li><a href="what_is_a_data_engineer.html">What is a Data Engineer</a></li>
+										<li><a href="agile_methodology.html">Agile Methodology</a></li>
+										<li><a href="python.html">Python</a></li>
+										<li><a href="sql.html">SQL</a></li>
+										<li><a href="databricks.html">Databricks</a></li>
+										<li><a href="data_architecture.html">Data Architecture</a></li>
+										<li><a href="database_modeling.html">Database Models</a></li>
+										<li><a href="pipelines.html">Data Pipelines</a></li>
+										<li><a href="data_engineer_tools.html">Data Engineering Tools</a></li>
+										<li><a href="cloud_storage_offerings.html">Cloud Storage Offerings</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Projects</a>
+									<ul>
+										<li><a href="#">Pipeline Project</a></li>
+										<li><a href="#">Capstone Project</a></li>
+									</ul>
+								</li>
+						</nav>
+
+				</section>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style2">
+					<div class="title"></div>
+					<div class="container">
+
+						<!-- Content -->
+							<div id="content">
+								<article class="box post">
+									<header class="style1">
+										<h2>How Data Engineers Use Python</h2>
+										<p align="left" style="color:#545557;">
+											Python is an industry tool that has many packages available to help with the data engineering process. 
+											You can do data ingestion, acquisition, manipulation, and create pipelines. Python can handle multiple 
+											file types and load these file types into a dataframe for manipulation. <br><br>
+
+                                            If your organization needs to acquire data, python is a great tool for that. Using a few libraries, 
+											you can create a web scraper that will accomplish the time-consuming task of manually entering data. 
+											Python interfaces with different APIs brilliantly which allows it to be so versatile when scarping data. <br><br>
+
+											Another great use case for Python in data engineering is for use with Apache Spark (more info on that later). 
+											Spark is a big data processing platform that utilized PySpark to manipulate dataframes on very large-scale data. <br><br>
+
+											The best part about Python is that it is extremely accessible. The position you are currently working in 
+											may not need Python but knowing how to program in this language would be extremely useful down the line. 
+											Between the analytics, statistical, and machine learning packages, the API integration, and the ability 
+											to easily transform and extract data, Python is a growing tool in our industry.
+                                        </p><br>
+										<h2>Python Basics</h2>
+                                        <p align="left" style="color:#545557;"><strong>Variables</strong></p>
+                                        <p align="left" style="color:#545557;">
+                                            Variables in Python are how you store data. For example, take the following line of code:<br><br>
+
+											<img src="images/thumbnails/py_var_1.png" style="display: block; margin-right: auto; margin-left: auto;"><br>
+
+											Here we have name set to “Your Name Here”. Now if we wanted to print “Your Name Here”, instead of 
+											typing it out every time we can just call print on the variable “name”. Variables are not limited 
+											to string type objects. In fact, you can store any Python data type in one. Variables are also 
+											stored in memory which assists with ease of access. String variables can be declared with single 
+											quotes () or double quotes (“), in this example we used double quotes. Lastly, variables are 
+											case sensitive. This means that if you have a variables “A” and another variables “a”, they 
+											will not overwrite each other.<br><br>
+
+											<img src="images/thumbnails/py_var_2.png" style="display: block; margin-right: auto; margin-left: auto;"><br>
+                                        </p>
+										<p align="left" style="color:#545557;"><strong>Loops</strong></p>
+                                        <p align="left" style="color:#545557;">
+											Loops are a great way to iterate over an action. Loops can be used to print out all the items in a list, 
+											store values in a dataframe that meet a certain criteria, and so much more. There are two different 
+											types of loops, <strong>While</strong> and <strong>For</strong>. <br><br>
+
+											A <strong>While</strong> loop will continue to run until a conditional is met. Thus, if you know how many times you want
+											your loop to iterate through, you should use a while loop. <br><br>
+
+											A <strong>For</strong> loop is useful when you do not know how many iterations the program should do. <br><br>
+                                        
+											<img src="images/thumbnails/py_loop.png" style="display: block; margin-right: auto; margin-left: auto;"><br>
+
+											In the example above we can see that both a <strong>For</strong> and <strong>While</strong> loop can accomplish the same task. However, it takes a lot more 
+											effort in this example to run a <strong>While</strong> loop than a <strong>For</strong> loop. In the <strong>For</strong> loop, we set our iterable in this case “letter”. 
+											The iterable then goes over each letter stored in “alphabet” and prints it. The <strong>While</strong> loop on the other hand needs a 
+											pre-defined iterable. Here we set “i = 0” as python starts counting at 0. The loop then begins with a check. It will ask 
+											itself “is i greater than or equal to 25”? While this condition is not met it will continue to run. In this case it will 
+											print the letter of the alphabet that corresponds with i. After doing the calculation you would like your <strong>While</strong> loop to do 
+											YOU MUST increment your iterable, otherwise you will be caught in an infinite loop.
+                                        </p>
+										<p align="left" style="color:#545557;"><strong>Calculations</strong></p>
+                                        <p align="left" style="color:#545557;">
+											Python is also able to do multiple types of calculations. It can add numbers, concatenate strings, and even do regression. <br><br>
+
+											<img src="images/thumbnails/py_calc.PNG" style="display: block; margin-right: auto; margin-left: auto;"><br>
+
+											For our mathematical example, we have two variables “five” and “six”. We set these variable to 5 and 6 (the integers) and set a 
+											new variable called “sum” to be the addition of “five” and “six”. When we call sum, it will output the integer 11. In our next 
+											example we have a word and a sentence both of which are strings. When we add these two variables together, we get the word 
+											variable appended to the end of the sentence variable. As a note, you do not need to have variables to do calculations. You 
+											can just as easily call print on “this is a sentence.” + “word” and will get the same output. <br><br>
+										</p>
+										<p align="left" style="color:#545557;"><strong>Libraries</strong></p>
+                                        <p align="left" style="color:#545557;">
+											In Python libraries are extremely important. Generally, it is how you will access many of the function&#39s python has to offer. 
+											Here we will go through the most common libraries found for Data Engineer but remember there are many more than what is shown.<br>
+										</p>
+										<p align="left" style="color:#545557; margin-left:40px;">
+											<strong>Pandas</strong><br><br>
+											Perhaps one of Pythons most popular packages is Pandas. Pandas is used to read, write, query, and manipulate data. Pandas dataframes 
+											have many easy-to-use functions with allows for easy data exploration and manipulation such as finding null values.<br><br>
+
+											<strong>BeautifulSoup</strong><br><br>
+											BeautifulSoup is a Python library that is used for data mining and web scraping. If your organization needs information extracted from 
+											a website that is in HTML or JSON format this is the easiest way to extract it.<br><br>
+
+											<strong>Matplotlib, Seaborn, Plotly</strong><br><br>
+											Matplotlib, Seaborn, and Plotly are all graphing libraries that allow for visualization on the data. Although a Data Engineer does not 
+											generally make graphs, it is an important step to visualize the data you are working with.<br><br>
+											Matplotlib is the original graphing library and as such is not very user friendly and there is a lot of effort required to make your graphs look pretty.<br><br>
+											Seaborn is essentially Matplotlib 2.0. It is a slightly more user-friendly and the graphs look significantly nicer.<br><br>
+											Plotly is the best graphing library as it is very easy to use and for very little effort your graphs can look amazing. <br><br>
+										</p>
+										<p align="left" style="color:#545557;"><strong>Data Ingestion and Manipulation</strong></p>
+                                        <p align="left" style="color:#545557;">
+											One of the key advantages to using Python is how easy it is to ingest and manipulate data. Using a few simple functions built into Pandas, anyone can quickly start 
+											investigating and fixing any data set. To read in a file you use the “read_*file_type*() function. Something to remember is if you have a local file and it is in 
+											your current working directory, you can call the file directly without a path. If your file is not in your current directory or it is not on your local machine, 
+											you will need to provide a full path.<br><br>
+
+											<img src="images/thumbnails/py_read_csv.PNG" style="display: block; margin-right: auto; margin-left: auto;"><br>
+
+											Once you have your data loaded into a dataframe, there are many functions you can perform to manipulate the data. If you want to get the number of nulls in an entire 
+											dataframe you can use the isna() function. The info() function will display the meta-data, column names, and non-null count per column. You can drop all rows containing 
+											null values using the dropna() function. Sometimes when you import a dataset the columns can be mislabeled. It is easy to change the name with the rename() function. 
+											In the example below, the original dataframe had three columns "0", "1", "2". These column names weren&#39t very descriptive of the content that was stored under them. 
+											Thus, we renamed them to reflect what content the column contained.<br><br>
+
+											<img src="images/thumbnails/py_df.PNG" style="display: block; margin-right: auto; margin-left: auto;"><br>
+
+										</p>
+
+										<h2>Exercise: Leetcode Algorithms</h2>
+										<p align="left" style="color:#545557;">
+											Below are a list of <a href="https://leetcode.com/">Leetcode</a> questions. They are in order from easiest to hardest. You don&#39t have to finish all these problems in
+											on sitting. We would suggest working through one a dat over the course of your internship.
+										</p><br>
+										<p align="left" style="color:#545557; margin-left:40px;">
+											1. <a href="https://leetcode.com/problems/fizz-buzz/">Fizz Buzz</a><br>
+											2. <a href="https://leetcode.com/problems/roman-to-integer/">Roman to Integer</a><br>
+											3. <a href="https://leetcode.com/problems/palindrome-number/">Palindrome Number</a><br>
+											4. <a href="https://leetcode.com/problems/valid-parentheses/">Valid Parentheses</a><br>
+											5. <a href="https://leetcode.com/problems/plus-one/">Plus One</a>
+										</p>
+									</header>
+								</article>
+							</div>
+
+					</div>
+				</div>
+
+			<!-- links -->
+				<section id="highlights" class="wrapper style3">
+					<div class="title">Links</div>
+					<div class="container">
+						<div class="row aln-center">
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="https://www.youtube.com/watch?v=kY-BMEr0soM&ab_channel=AndreasKretz" class="image featured"><img src="images/thumbnails/most_important_skills_python_for_data_engineers.webp" alt="" height=180/></a>
+									<h3><a href="https://www.youtube.com/watch?v=kY-BMEr0soM&ab_channel=AndreasKretz">Most important Python skills for Data Engineers!</a></h3>
+									<p>Video by Andreas Kretz</p>
+									<ul class="actions">
+										<li><a href="https://www.youtube.com/watch?v=kY-BMEr0soM&ab_channel=AndreasKretz" class="button style1">Watch Video</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="https://www.youtube.com/watch?v=jtvo6jR4rMQ&ab_channel=TechLake" class="image featured"><img src="images/thumbnails/python_for_data_engineering.webp" alt="" height=180 /></a>
+									<h3><a href="https://www.youtube.com/watch?v=jtvo6jR4rMQ&ab_channel=TechLake">Python For Data Engineering</a></h3><br>
+									<p>Video by TechLake</p>
+									<ul class="actions">
+										<li><a href="https://www.youtube.com/watch?v=jtvo6jR4rMQ&ab_channel=TechLake" class="button style1">Watch Video</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="https://www.youtube.com/watch?v=8z9hIxa8_S4&ab_channel=Intellipaat" class="image featured"><img src="images/thumbnails/data_engineering_using_python.webp" alt="" height=180/></a>
+									<h3><a href="https://www.youtube.com/watch?v=8z9hIxa8_S4&ab_channel=Intellipaat">Data Engineering using Python</a></h3><br>
+									<p>Video by Intellipaat</p>
+									<ul class="actions">
+										<li><a href="https://www.youtube.com/watch?v=8z9hIxa8_S4&ab_channel=Intellipaat" class="button style1">Watch Video</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="https://www.projectpro.io/article/python-for-data-engineering/592#mcetoc_1g3j3gfcnv" class="image featured"><img src="images/thumbnails/article_clipart.png" height="150"/></a>
+									<h3><a href="https://www.projectpro.io/article/python-for-data-engineering/592#mcetoc_1g3j3gfcnv">How to learn Python for <br>Data Engineering?</a></h3>
+									<p>Article by ProProject</p>
+									<ul class="actions">
+										<li><a href="https://www.projectpro.io/article/python-for-data-engineering/592#mcetoc_1g3j3gfcnv" class="button style1">Read Article</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="https://hevodata.com/learn/python-for-data-engineering/" class="image featured"><img src="images/thumbnails/hevo.png" alt="" height=180/></a>
+									<h3><a href="https://hevodata.com/learn/python-for-data-engineering/">Role of Python For Data Engineering:<br>4 Critical Aspects</a></h3>
+									<p>Article by Hevo</p>
+									<ul class="actions">
+										<li><a href="https://hevodata.com/learn/python-for-data-engineering/" class="button style1">Read Article</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="https://www.datacamp.com/courses/intro-to-python-for-data-science" class="image featured"><img src="images/thumbnails/data_camp.jpg" alt="" height=180/></a>
+									<h3><a href="https://www.datacamp.com/courses/intro-to-python-for-data-science">Datacamp</a></h3><br>
+									<p>Online resource to learn coding</p>
+									<ul class="actions">
+										<li><a href="https://www.datacamp.com/courses/intro-to-python-for-data-science" class="button style1">Learn Code</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="https://www.codecademy.com/learn/learn-python-3" class="image featured"><img src="images/thumbnails/code_academy.png" alt="" height="150"/></a>
+									<h3><a href="https://www.codecademy.com/learn/learn-python-3">Codecademy</a></h3><br>
+									<p>Online resource to learn coding</p>
+									<ul class="actions">
+										<li><a href="https://www.codecademy.com/learn/learn-python-3" class="button style1">Learn Code</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="https://docs.python.org/3/" class="image featured"><img src="images/thumbnails/python.jpeg" height="150" /></a>
+									<h3><a href="https://docs.python.org/3/">Python</a></h3><br>
+									<p>Official Documentation for Python</p>
+									<ul class="actions">
+										<li><a href="https://docs.python.org/3/" class="button style1">Read Documentation</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="https://pandas.pydata.org/pandas-docs/stable/" class="image featured"><img src="images/thumbnails/pandas.png" height="150" /></a>
+									<h3><a href="https://pandas.pydata.org/pandas-docs/stable/">Pandas</a></h3><br>
+									<p>Official Documentation for Pandas</p>
+									<ul class="actions">
+										<li><a href="https://pandas.pydata.org/pandas-docs/stable/" class="button style1">Read Documentation</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="https://matplotlib.org/stable/index.html" class="image featured"><img src="images/thumbnails/matplotlib.jpg" height="150" /></a>
+									<h3><a href="https://matplotlib.org/stable/index.html">Matplotlib</a></h3><br>
+									<p>Official Documentation for Matplotlib</p>
+									<ul class="actions">
+										<li><a href="https://matplotlib.org/stable/index.html" class="button style1">Read Documentation</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="https://seaborn.pydata.org/" class="image featured"><img src="images/thumbnails/seaborn.jpg" height="150" /></a>
+									<h3><a href="https://seaborn.pydata.org/">Seaborn</a></h3><br>
+									<p>Official Documentation for Seaborn</p>
+									<ul class="actions">
+										<li><a href="https://seaborn.pydata.org/" class="button style1">Read Documentation</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="https://plotly.com/python/" class="image featured"><img src="images/thumbnails/plotly.png" height="150" /></a>
+									<h3><a href="https://plotly.com/python/">Plotly</a></h3><br>
+									<p>Official Documentation for Plotly</p>
+									<ul class="actions">
+										<li><a href="https://plotly.com/python/" class="button style1">Read Documentation</a></li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section class="highlight">
+									<a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/" class="image featured"><img src="images/thumbnails/beautifulsoup.jpg" height="150" /></a>
+									<h3><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a></h3><br>
+									<p>Official Documentation for BeautifulSoup</p>
+									<ul class="actions">
+										<li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/" class="button style1">Read Documentation</a></li>
+									</ul>
+								</section>
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- footer -->
+				<section id="footer" class="wrapper style3">
+					<a href = "https://www.trudatasolutions.com/">
+						<img src="images/thumbnails/tru_data_banner.jpg" style="display: block; margin-right: auto; margin-left: auto;">
+					</a>						<div id="copyright">
+							<ul>
+								<li>&copy; truData Solutions.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Database Modeling</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header" class="wrapper">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1><a href="#">Database Modeling</a></h1>
+							<p>
+								In this section we will cover the different types of database models such as star schemas, <br>
+								relational database, and one big table. We will also cover mapping and staging tables. <br>
+								Finally, we will conclude with an exercise that has you create a star schema.
+							</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li class="current">
+									<a href="#">Modules</a>
+									<ul>
+										<li><a href="what_is_a_data_engineer.html">What is a Data Engineer</a></li>
+										<li><a href="agile_methodology.html">Agile Methodology</a></li>
+										<li><a href="python.html">Python</a></li>
+										<li><a href="sql.html">SQL</a></li>
+										<li><a href="databricks.html">Databricks</a></li>
+										<li><a href="data_architecture.html">Data Architecture</a></li>
+										<li><a href="database_modeling.html">Database Models</a></li>
+										<li><a href="pipelines.html">Data Pipelines</a></li>
+										<li><a href="data_engineer_tools.html">Data Engineering Tools</a></li>
+										<li><a href="cloud_storage_offerings.html">Cloud Storage Offerings</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Projects</a>
+									<ul>
+										<li><a href="#">Pipeline Project</a></li>
+										<li><a href="#">Capstone Project</a></li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+
+				</section>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style2">
+					<div class="title"></div>
+					<div class="container">
+
+						<!-- Content -->
+							<div id="content">
+								<article class="box post">
+									<header class="style1">
+										<h2>Star Schema</h2>
+										<p align="left" style="color:#545557;">
+											The star schema is one of the simples and widely used in data warehouses. It includes one or 
+											more fact tables in the center and has its branches to multiple dimension tables. The fact 
+											table hold a key relationship to all the dimensions in the schema. The fact table 
+											holds quantitative information, and the dimension tables hold descriptive characteristics 
+											related to the fact table.<br><br>
+
+											<img src="images/star_schema_diag.png" style="display: block; margin-right: auto; margin-left: auto;"><br>
+
+											The advantage to this model is that it holds simple logic for querying meaning joins are easy 
+											to perform. It also uses OLAP which allows users to analyze data from multiple databases at 
+											the same time.<br><br>
+
+											The disadvantages are that it has reduced flexibility and data integrity is not enforced 
+											due to the highly denormalized nature of the model.<br><br>
+										</p>
+										<h2>Relational Database</h2>
+										<p align="left" style="color:#545557;">
+											Relational database models are another common database. Here you have multiple tables all 
+											connected via a primary key/foreign key relationship. They are different than the star schema 
+											model as they do not have a fact table. Instead, they have many dimension tables which can 
+											all be connected. Joins on these types of tables can be significantly more complex than 
+											star schemas as you may need to touch multiple tables to get your target table.<br><br>
+
+											<img src="images/relastional_database_diag.png" style="display: block; margin-right: auto; margin-left: auto;" /><br><br>
+
+											Relational databases are very easy to use, and you can increase your query speed drastically 
+											with indices. They also support Atomicity, Consistency, Isolation, and Durability (ACID) 
+											properties which enable reliable transaction processing. Relational databases also do an 
+											excellent job or reducing redundancies. This is because generally we will see databases 
+											with this model hold up to Boyce-Codd normal form (or 3.5NF). However, it is possible 
+											that an organization may take their database up to 6th normal form.<br><br>
+
+											Some issues with Relational Databases is that they can be very expensive to set-up 
+											and maintain. They can also lack speed if the query is not optimized as many tables 
+											need to be touched and computations can slow down the system.<br><br>
+										<h2>One Big Table</h2>
+										<p align="left" style="color:#545557;">
+											One Big Table or OBT is a database model that denormalizes the database into a single large table. The 
+											general consensus on this model is mixed as it can boost query performance as you do not need to 
+											join multiple tables. However, you lose the consistency and redundancies as some features may 
+											be reported as NULL instead of omitted from the table.<br><br>
+	
+											<img src="images/OBT_diag.png" style="display: block; margin-right: auto; margin-left: auto;" /><br><br>
+
+										<h2>Exercise: Denormalize a Database</h2>
+										<p align="left" style="color:#545557;margin-left:40px;">
+											In this exercise you will take a <a href="https://www.postgresqltutorial.com/postgresql-getting-started/postgresql-sample-database/">relational database</a> 
+											and denormalize it into a star or snowflake schema. I would recommend breaking this into 
+											several small steps rather than just modeling the star directly in a database. First you 
+											may want to draw out the star schema. You can use a white board or any computer software 
+											(such as LucidCharts). Create your fact table and begin absorbing information into the 
+											dimension tables. Ask yourself what the main entity is and its children. For example, 
+											can the staff and store table be combined?<br><br>
+
+											Once you have your design laid out, start modeling in a database of your choice. 
+											If you want to use a PostgreSQL or MariaDB database, you can follow one of the links 
+											below to set one up. Otherwise, you can always use Snowflake.<br><br>
+
+											To use the sample database, you will need to extract the zip file into a tar. 
+											Once you are done, push your code to a forked branch on the truData repository.
+										</p>
+									</header>
+								</article>
+							</div>
+
+					</div>
+				</div>
+
+			<!-- links -->
+			<!-- left off here -->
+			<section id="highlights" class="wrapper style3">
+				<div class="title">Links</div>
+				<div class="container">
+					<div class="row aln-center">
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://www.youtube.com/watch?v=Re0I6zYCKjw&ab_channel=AnalyticswithNags" class="image featured"><img src="images/thumbnails/analytics_with_nags.webp" alt="" height=180/></a>
+								<h3><a href="https://www.youtube.com/watch?v=Re0I6zYCKjw&ab_channel=AnalyticswithNags">What is Star Schema</a></h3>
+								<p>Video by Analytics with Nags</p>
+								<ul class="actions">
+									<li><a href="https://www.youtube.com/watch?v=Re0I6zYCKjw&ab_channel=AnalyticswithNags" class="button style1">Watch Video</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://www.youtube.com/watch?v=VOJ54hu2e2Q&ab_channel=InformaticaInterview" class="image featured"><img src="images/thumbnails/informatica_review.webp" alt="" height=180/></a>
+								<h3><a href="https://www.youtube.com/watch?v=VOJ54hu2e2Q&ab_channel=InformaticaInterview">Star and SnowFlake Schema in Data Warehouse</a></h3>
+								<p>Video by Informatica Interview</p>
+								<ul class="actions">
+									<li><a href="https://www.youtube.com/watch?v=VOJ54hu2e2Q&ab_channel=InformaticaInterview" class="button style1">Watch Video</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://www.youtube.com/watch?v=OqjJjpjDRLc&ab_channel=IBMTechnology" class="image featured"><img src="images/thumbnails/what_is_a_RDB.webp" alt="" height=180/></a>
+								<h3><a href="https://www.youtube.com/watch?v=OqjJjpjDRLc&ab_channel=IBMTechnology">What is a Relational Database?</a></h3>
+								<p>Video by IBM Technology</p>
+								<ul class="actions">
+									<li><a href="https://www.youtube.com/watch?v=OqjJjpjDRLc&ab_channel=IBMTechnology" class="button style1">Watch Video</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://www.geeksforgeeks.org/star-schema-in-data-warehouse-modeling/" class="image featured"><img src="images/thumbnails/geeksforgeeks-19.jpg" alt="" height=180/></a>
+								<h3><a href="https://www.geeksforgeeks.org/star-schema-in-data-warehouse-modeling/">Star Schema in Data Warehouse modeling</a></h3>
+								<p>Artcile by Geeks for Geeks</p>
+								<ul class="actions">
+									<li><a href="https://www.geeksforgeeks.org/star-schema-in-data-warehouse-modeling/" class="button style1">Read Article</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://webandcrafts.com/blog/advantages-disadvantages-rdbms/" class="image featured"><img src="images/thumbnails/Webandcrafts.png" alt="" height=180/></a>
+								<h3><a href="https://webandcrafts.com/blog/advantages-disadvantages-rdbms/">Advantages and Disadvantages of RDBMS</a></h3>
+								<p>Article by webandcarfts</p>
+								<ul class="actions">
+									<li><a href="https://webandcrafts.com/blog/advantages-disadvantages-rdbms/" class="button style1">Read Article</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://hightouch.com/blog/data-warehouse-modelling-part-2" class="image featured"><img src="images/thumbnails/hightouch.png" alt="" height=180/></a>
+								<h3><a href="https://hightouch.com/blog/data-warehouse-modelling-part-2">Modern Data Warehouse Modelling</a></h3>
+								<p>Article by hightouch</p>
+								<ul class="actions">
+									<li><a href="https://hightouch.com/blog/data-warehouse-modelling-part-2" class="button style1">Read Documentation</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://dbeaver.io/" class="image featured"><img src="images/thumbnails/dbeaver.png" alt="" height=180/></a>
+								<h3><a href="https://dbeaver.io/">DBeaver</a></h3>
+								<ul class="actions">
+									<li><a href="https://dbeaver.io/" class="button style1">Download Software</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://hevodata.com/learn/dbeaver-postgresql/" class="image featured"><img src="images/thumbnails/hevo.png" alt="" height=180/></a>
+								<h3><a href="https://hevodata.com/learn/dbeaver-postgresql/">Connect DBeaver and PostgreSQL</a></h3>
+								<ul class="actions">
+									<li><a href="https://hevodata.com/learn/dbeaver-postgresql/" class="button style1">Read Article</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://www.postgresqltutorial.com/postgresql-getting-started/load-postgresql-sample-database/" class="image featured"><img src="images/thumbnails/postgres-logo.png" alt="" height=180/></a>
+								<h3><a href="https://www.postgresqltutorial.com/postgresql-getting-started/load-postgresql-sample-database/">Load Sample Database</a></h3>
+								<ul class="actions">
+									<li><a href="https://www.postgresqltutorial.com/postgresql-getting-started/load-postgresql-sample-database/" class="button style1">Read Article</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="" class="image featured"><img src="images/thumbnails/postgres-logo.png" alt="" height=180/></a>
+								<h3><a href="">Setting up Postgres</a></h3>
+								<ul class="actions">
+									<li><a href="https://www.microfocus.com/documentation/idol/IDOL_12_0/MediaServer/Guides/html/English/Content/Getting_Started/Configure/_TRN_Set_up_PostgreSQL.htm" class="button style1">Windows</a></li>
+								</ul>
+								<ul class="actions">
+									<li><a href="https://www.sqlshack.com/setting-up-a-postgresql-database-on-mac/" class="button style1">Mac</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="" class="image featured"><img src="images/thumbnails/mariadb-logo.png" alt="" height=180/></a>
+								<h3><a href="">Setting up Postgres</a></h3>
+								<ul class="actions">
+									<li><a href="https://techexpert.tips/windows/installing-mariadb-windows/" class="button style1">Windows</a></li>
+								</ul>
+								<ul class="actions">
+									<li><a href="https://hevodata.com/learn/mariadb-mac/" class="button style1">Mac</a></li>
+								</ul>
+							</section>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- footer -->
+				<section id="footer" class="wrapper style3">
+					<a href = "https://www.trudatasolutions.com/">
+						<img src="images/thumbnails/tru_data_banner.jpg" style="display: block; margin-right: auto; margin-left: auto;">
+					</a>
+						<div id="copyright">
+							<ul>
+								<li>&copy; truData Solutions.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Data Architecture</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header" class="wrapper">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1><a href="#">Data Architecture</a></h1>
+							<p>
+								In this section we will go over the most common database architectures such as<br> 
+								Data Warehouse, Data Lake, and Delta Lake. We will deep dive into examples of each<br> 
+								architecture. We will wrap up with an exercise where we will work in Snowflake.
+							</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li class="current">
+									<a href="#">Modules</a>
+									<ul>
+										<li><a href="what_is_a_data_engineer.html">What is a Data Engineer</a></li>
+										<li><a href="agile_methodology.html">Agile Methodology</a></li>
+										<li><a href="python.html">Python</a></li>
+										<li><a href="sql.html">SQL</a></li>
+										<li><a href="databricks.html">Databricks</a></li>
+										<li><a href="data_architecture.html">Data Architecture</a></li>
+										<li><a href="database_modeling.html">Database Models</a></li>
+										<li><a href="pipelines.html">Data Pipelines</a></li>
+										<li><a href="data_engineer_tools.html">Data Engineering Tools</a></li>
+										<li><a href="cloud_storage_offerings.html">Cloud Storage Offerings</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Projects</a>
+									<ul>
+										<li><a href="#">Pipeline Project</a></li>
+										<li><a href="#">Capstone Project</a></li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+
+				</section>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style2">
+					<div class="title"></div>
+					<div class="container">
+
+						<!-- Content -->
+							<div id="content">
+								<article class="box post">
+									<header class="style1">
+										<h2>Data Warehouse</h2>
+										<p align="left" style="color:#545557;">
+											A data warehouse is perhaps the most common data architecture you will see at companies. It is a repository 
+											for storing large amounts of data from multiple sources within an organization. In general, data warehouses 
+											store historical data and are organized in a relational database management system.<br><br>
+
+											Data warehouses go through the ETL process so that individuals who need to work with the data have it in 
+											a prepared fashion. This means the data is cleaned and ready for production right out of the box.<br><br>
+
+											<img src="images/data_warehouse.png" style="display: block; margin-right: auto; margin-left: auto;"><br>
+
+											Within a data warehouse we can also have a transactional database. In general, you will never touch a 
+											transactional database as this is where production is run. Any kind of error or bug may bring down 
+											production. Transactional databases stores day to day operations and uses INSERT and UPDATE 
+											statements. <br><br>
+
+											The benefits of a data warehouse would be that storing data in this manner gives improvement to 
+											standardization - consistent formatting of tables, quality - a clear set of instructions as to 
+											how the data is set-up, and consistency. It will also increase the speed at which analytics and 
+											business intelligence can flow. <br><br>
+
+											There are some draw backs to data warehouses as well such as lack of flexibility. Due to their 
+											nature, they excel with structured data but struggle with semi and unstructured data. They also 
+											have a high implementation costs.<br><br>
+
+											<strong>Snowflake Data Warehouse</strong><br><br>
+
+											Snowflake is a data warehouse that allows for storage, processing, and analysis that are 
+											more flexible than traditional offerings. A huge draw to Snowflake is its separation of compute 
+											and storage. This allows organizations to scale dynamically and can lower the overall cost of 
+											the data warehouse.<br><br>
+										</p>
+										<h2>Data Lake</h2>
+										<p align="left" style="color:#545557;">
+											A data lake is a highly flexible storage repository that stores structured and unstructured data in 
+											its raw, unformatted form. In contrast to a data warehouse which stores cleaned data, a data lake 
+											uses a flat architecture and organizes its contents in their raw form. Data lakes are very flexible 
+											and cost-effective which still giving an organization the ability to gain insight from their data.<br><br>
+
+											With data lakes, the data follows an ELT schema rather than the ETL of the data warehouse. This means 
+											that data is loaded into the data center in its raw, untouched, unaltered form. Due to this there 
+											is large flexibility if the data being pulled. Due to this, data lakes are generally better for 
+											machine learning and data science.<br><br>
+
+											<img src="images/data_lake_pattern.png" style="display: block; margin-right: auto; margin-left: auto;" /><br><br>
+
+											There are some drawbacks to data lakes. Due to its unformatted and unstructured nature, its 
+											performances is significantly lower than a data warehouse for data analytics and business 
+											intelligence uses. It also lacks reliability and security. Since the data in data lakes are 
+											stored in a raw format it is difficult to enforce consistency. Also, because data lakes 
+											support all data formats, it is difficult to implement proper security measures.<br><br>
+
+											<strong>Snowflake Data Lake</strong><br><br>
+
+											Snowflake can operate as both a data warehouse and a data lake. It has native support 
+											for both structured and unstructured data making it an excellent tool for organizations 
+											needing a one and done solution.<br>
+											<h2>Delta Lake</h2>
+											<p align="left" style="color:#545557;">
+												Delta lakes are a relatively new concept and is yet to be widely adopted. It essentially provides 
+												reliability to the data lake architecture. They support ACID transactions, rollbacks, and unified 
+												streaming and batch data processing. Delta lakes run onto of pre-existing data lakes. In short, 
+												delta lakes take some of the best properties of a data warehouse and lay them onto of a data lake 
+												resulting in an extremely dynamic and robust data system.<br><br>
+	
+												Delta lakes are also separated into different tiers. The bronze tier offers a storage solutions 
+												for the raw data. We then move up to the silver tier which the data is cleaned and placed in a 
+												schema. At the gold tier, the data is ready for production and can be pulled and used immediately. <br><br>
+	
+												<img src="images/delta_lake_diag.png" style="display: block; margin-right: auto; margin-left: auto;" /><br><br>
+	
+												The downside to the delta lake architecture is that you must maintain two system which can be 
+												expensive for an organization. Since you have a data lake as the base and a delta lake overlay, 
+												you need admins to maintain both systems else you risk failure.<br><br>
+	
+												<strong>Databricks</strong><br><br>
+	
+												Databricks offers a delta lake architecture that is just a storage layer over their data lake 
+												system. It is compatible with the Apache Spark APIs which allows for very robust operations 
+												over the organizations data.<br>
+
+										<h2>Exercise: Setting up Snowflake</h2>
+										<p align="left" style="color:#545557;margin-left:40px;">
+											1. Now that you know the main data architectures lets set-up a Snowflake environment. Navigate to 
+											the <a href="https://www.snowflake.com/en/">Snowflake</a> website. In the top right corner, there is a “start for free” button”, click it.<br><br>
+											2. Next you will want to fill out your information and click continue.<br><br>
+											3. On the next panel you will be greeted with multiple options to select from. I recommend selecting the standard edition of Snowflake. 
+											Although it is unlikely you will use the free $400 of resources, on the other two options it is more likely to consume the 
+											credits at a faster rate. For your cloud provider choose Amazon Web Services. Lastly select the server that is nearest to you. 
+											Finally, click “Get started”.<br><br>
+											4. Once you&#39ve finished signing up you will need to active your account before you are able to log into Snowflake. Check the email 
+											you signed-up with. You should have received a link. Click it and create a Username and Password.<br><br>
+											5. Once you are successfully logged in you will be greeted with home page. Here you have an option. 
+											You can either continue in the newer GUI or can use the Classic Console.<br><br>
+											6. From the home page, navigate to “Databases”.<br><br>
+											7. Hit “Create” and name your database.<br><br>
+											8. Now that your database is created, it should show up in the list of databases available. Click on it. In the top right there 
+											is a “create” button. Select this and let&#39s recreate the employee table from the <a href="sql.html">SQL</a> section. As a note, do not forget to 
+											alter the value next to VARCHAR. Otherwise, the creation will throw an error.<br><br>
+											9. Next let&#39s create a warehouse. To create a warehouse, you should follow similar instructions as when we created the database. Select a name, 
+											size should be the smallest one possible for this example I chose X-Small. Leave the rest of the settings as default.<br><br>
+											10. Now we are ready to insert data into the database. Navigate to worksheets at the top of the page. Set your database path. Write your insert statement.<br><br>
+										</p>
+									</header>
+								</article>
+							</div>
+
+					</div>
+				</div>
+
+			<!-- links -->
+			<section id="highlights" class="wrapper style3">
+				<div class="title">Links</div>
+				<div class="container">
+					<div class="row aln-center">
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://www.youtube.com/watch?v=AwbKwcw7bgg&ab_channel=intricity101" class="image featured"><img src="images/thumbnails/intricity_data_lake_v_warehouse.webp" alt="" height=180/></a>
+								<h3><a href="https://www.youtube.com/watch?v=AwbKwcw7bgg&ab_channel=intricity101">Data Lake vs Data Warehouse</a></h3>
+								<p>Video by intricity101</p>
+								<ul class="actions">
+									<li><a href="https://www.youtube.com/watch?v=AwbKwcw7bgg&ab_channel=intricity101" class="button style1">Watch Video</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://www.youtube.com/watch?v=PftRBoqjhZM&ab_channel=Databricks" class="image featured"><img src="images/thumbnails/what_is_delta_lake.webp" alt="" height=180/></a>
+								<h3><a href="https://www.youtube.com/watch?v=PftRBoqjhZM&ab_channel=Databricks">What is Delta Lake?</a></h3>
+								<p>Video by Databricks</p>
+								<ul class="actions">
+									<li><a href="https://www.youtube.com/watch?v=PftRBoqjhZM&ab_channel=Databricks" class="button style1">Watch Video</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://www.youtube.com/watch?v=g9L5tM6d7vI&t=379s&ab_channel=SnowflakeInc." class="image featured"><img src="images/thumbnails/what_is_snowflake.webp" alt="" height=180/></a>
+								<h3><a href="https://www.youtube.com/watch?v=g9L5tM6d7vI&t=379s&ab_channel=SnowflakeInc.">What is Snowflake?</a></h3>
+								<p>Video by Snowflake Inc.</p>
+								<ul class="actions">
+									<li><a href="https://www.youtube.com/watch?v=g9L5tM6d7vI&t=379s&ab_channel=SnowflakeInc." class="button style1">Watch Video</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://www.striim.com/blog/data-warehouse-vs-data-lake-vs-data-lakehouse-an-overview/" class="image featured"><img src="images/thumbnails/striim_logo.png" alt="" height=180/></a>
+								<h3><a href="https://www.striim.com/blog/data-warehouse-vs-data-lake-vs-data-lakehouse-an-overview/">Data Warehouse vs. Lake vs. <br>Lakehouse</a></h3>
+								<p>Artcile by Striim</p>
+								<ul class="actions">
+									<li><a href="https://www.striim.com/blog/data-warehouse-vs-data-lake-vs-data-lakehouse-an-overview/" class="button style1">Read Article</a></li>
+								</ul>
+							</section>
+						</div> <!--Left off here-->
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://www.xenonstack.com/blog/delta-lake#:~:text=Delta%20Lake%20architecture%2C%20Lambda%20Architecture&text=The%20key%20downside%20to%20this,victorious%20though%20in%20those%20attempts." class="image featured"><img src="images/thumbnails/xenonstack_logo.png" alt="" height=180/></a>
+								<h3><a href="https://www.xenonstack.com/blog/delta-lake#:~:text=Delta%20Lake%20architecture%2C%20Lambda%20Architecture&text=The%20key%20downside%20to%20this,victorious%20though%20in%20those%20attempts.">Delta Lake - An Efficient Solution to Being Reliability to Data Lakes</a></h3>
+								<p>Article by Xenonstack</p>
+								<ul class="actions">
+									<li><a href="https://www.xenonstack.com/blog/delta-lake#:~:text=Delta%20Lake%20architecture%2C%20Lambda%20Architecture&text=The%20key%20downside%20to%20this,victorious%20though%20in%20those%20attempts." class="button style1">Read Article</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://docs.snowflake.com/en/" class="image featured"><img src="images/thumbnails/snowflake_logo.png" alt="" height=180/></a>
+								<h3><a href="https://docs.snowflake.com/en/">Snowflake Documentation</a></h3>
+								<p>Official Documentation for Snowflake</p>
+								<ul class="actions">
+									<li><a href="https://docs.snowflake.com/en/" class="button style1">Read Documentation</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://docs.databricks.com/" class="image featured"><img src="images/thumbnails/databricks_logo.png" alt="" height=180/></a>
+								<h3><a href="https://docs.databricks.com/">Databricks Documentation</a></h3>
+								<p>Official Documentation for Databricks</p>
+								<ul class="actions">
+									<li><a href="https://docs.databricks.com/" class="button style1">Read Documentation</a></li>
+								</ul>
+							</section>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- footer -->
+				<section id="footer" class="wrapper style3">
+					<a href = "https://www.trudatasolutions.com/">
+						<img src="images/thumbnails/tru_data_banner.jpg" style="display: block; margin-right: auto; margin-left: auto;">
+					</a>
+						<div id="copyright">
+							<ul>
+								<li>&copy; truData Solutions.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
