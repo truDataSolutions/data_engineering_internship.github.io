@@ -153,23 +153,59 @@
 										<p align="left" style="color:#545557;margin-left:40px;">
 											1. Now that you know the main data architectures lets set-up a Snowflake environment. Navigate to 
 											the <a href="https://www.snowflake.com/en/" target="_blank">Snowflake</a> website. In the top right corner, there is a “start for free” button”, click it.<br><br>
+
 											2. Next you will want to fill out your information and click continue.<br><br>
+
 											3. On the next panel you will be greeted with multiple options to select from. I recommend selecting the standard edition of Snowflake. 
 											Although it is unlikely you will use the free $400 of resources, on the other two options it is more likely to consume the 
 											credits at a faster rate. For your cloud provider choose Amazon Web Services. Lastly select the server that is nearest to you. 
 											Finally, click “Get started”.<br><br>
+
 											4. Once you&#39ve finished signing up you will need to active your account before you are able to log into Snowflake. Check the email 
 											you signed-up with. You should have received a link. Click it and create a Username and Password.<br><br>
-											5. Once you are successfully logged in you will be greeted with home page. Here you have an option. 
-											You can either continue in the newer GUI or can use the Classic Console.<br><br>
+
+											5. Once you are successfully logged in you will be greeted with home page.<br><br>
+
 											6. From the home page, navigate to “Databases”.<br><br>
+
 											7. Hit “Create” and name your database.<br><br>
+
 											8. Now that your database is created, it should show up in the list of databases available. Click on it. In the top right there 
 											is a “create” button. Select this and let&#39s recreate the employee table from the <a href="sql.html" target="_blank">SQL</a> section. As a note, do not forget to 
 											alter the value next to VARCHAR. Otherwise, the creation will throw an error.<br><br>
+
 											9. Next let&#39s create a warehouse. To create a warehouse, you should follow similar instructions as when we created the database. Select a name, 
 											size should be the smallest one possible for this example I chose X-Small. Leave the rest of the settings as default.<br><br>
-											10. Now we are ready to insert data into the database. Navigate to worksheets at the top of the page. Set your database path. Write your insert statement.<br><br>
+
+											10. You will need to download the <a href="https://docs.snowflake.com/en/user-guide/snowsql-install-config.html">SnowflakeCLI</a>.
+											This will allow you to access Snowflake from the command line.<br><br>
+
+											11. In a Snowflake worksheet (or a text editor) create a table to store your data in. I would recommend to have all the data types
+											for each column to be set to VARCHAR for now. This is a RAW table and for data ingestion purposes will help us later. We will fix
+											this at a later stage.<br><br>
+											<img src="images/creat_table_snowflake.png"><br><br>
+
+											12. Using the Snowflake CLI we can access Snowflake from a terminal. Here, we will create a connection with our Snowflake instance.
+											To do so, we will need a few things: Snowflake Account ID, Snowflake Username, and Snowflake Password. Your Account ID is the string
+											Presented to you when logging into Snowflake. On the command line run the command below to create a connection:
+											<p style="border-width:3px; border-style:solid; border-color:#000000; padding: 1em;">
+												snowsql -a &lt;account_id&gt; -u &lt;username&gt; *hit enter and then input your password*
+											</p> 
+										</p>
+
+										<p align="left" style="color:#545557;margin-left:40px;">
+											13. Use the 'USE' command to assign a schema schema(if working outside PUBLIC SCHEMA), data warehouse, and database.<br><br>
+											 <img src="images/snowflake_use.png"><br><br>
+
+											14. We will need to create a <a href="https://docs.snowflake.com/en/sql-reference/sql/create-stage.html">staging</a> area for our
+											data to be able to be imported into Snowflake.<br><br>
+
+											15. Using the <a href="https://docs.snowflake.com/en/sql-reference/sql/put.html">PUT</a> command you can place the CSV file into
+											your staging area.<br><br>
+
+											16. Using the <a href="https://docs.snowflake.com/en/sql-reference/sql/copy-into-table.html">COPY</a> command, copy the staged file to a new table in Snowflake.<br><br>
+
+											17. Run a SQL query to ensure the new table has been populated correctly.
 										</p>
 									</header>
 								</article>
