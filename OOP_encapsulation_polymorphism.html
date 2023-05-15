@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Databricks</title>
+		<title>Object Oriented Programming - Encapsulation & Polymorphism</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -66,59 +66,53 @@
 							<div id="content">
 								<article class="box post">
 									<header class="style1">
-										<h2>Intro to Databricks</h2>
+										<h2>What is Object Oriented Programming</h2>
 										<p align="left" style="color:#545557;">
-											Databricks is a web-based platform that provides cluster management and Python notebook style files. It is extremely 
-											useful when analyzing big data as the platform is cloud based. This means that a computation that may be extremely 
-											hindering due to your personal computer hardware can now run-in seconds! Due to its cloud nature, it uses distributed 
-											computing on a cluster of machines. Like Hadoop, there is a driver node and workers. This is how we can complete 
-											complex calculations in seconds as the workload is spread across a network.<br><br>
-
-											<img src="images/master_worker.png" style="display: block; margin-right: auto; margin-left: auto;"><br>
-
-											Databricks also supports Lakehouse architecture. This means you can be extremely dynamic with your database as you have 
-											the option to use a data warehouse, data lake, or the lakehouse itself. We will discuss in depth the difference between 
-											each warehousing technique later. For now, just know that each type has their specific use case.<br><br>
-
-											Databricks runs on the Apache Spark API which allows for multiple programming languages to be used in a notebook. 
-											Some supported languages are SQL, Python, and R.<br><br>
-
-											<strong>Mini Exercise: Setting up your first workbook</strong><br>
-											<p align="left" style="margin-left:40px;color:#545557;">
-												1. Create a <a href="https://community.cloud.databricks.com/login.html" target="_blank">Databricks Community Edition</a> account.<br>
-												2. Navigate to the left hand menu. Under the Create tap, select Cluster<br>
-												3. Give your cluster an appropriate name. You can leave the rest of the settings as default. Then hit create<br>
-												4. Once you cluster has been successfully created (marked by a green check), return to the create tab and select notebook.<br>
-												5. Give your notebook an appropriate name, choose your default language (I recommend Python), and select the 
-												cluster you just created. Hit create and you are all set-up.<br>
-											</p>
+											Object Oriented Programming or OOP for short is the practice of organizing software design
+											around objects rather than functions and logic. OOP focuses on the objects the developers
+											want to manipulate rather than the logic to manipulate them. This approach is well suited
+											for projects tha are large, complex, and actively updated and maintained.
 										</p>
-										<h2>Spark</h2>
 										<p align="left" style="color:#545557;">
-											Apache Spark is a fast, general purpose cluster computing system for large scale data processing. It uses high level
-											APIs in Java, Scala, Python, and R. It is suitable for both batch processing and streaming processing. The 
-											difference between the two is that batch processing is set to complete jobs at a specified time whereas 
-											streaming processing occurs in real time.<br><br>
+											OOP also follows a general structure. This includes <strong>classes</strong>, <strong>objects</strong>,
+											<strong>methods</strong>, and <strong>attributes</strong>.<br><br>
+											<!--intro to classes-->
+											<strong>Classes</strong> are a data structure that act as a blueprint for an individual object, methods, and attributes.
+											An example of a class would be a "Dog". The Dog class will consist of methods and attributes. A method could be an action
+											such as bark, scratch, or jump while an attribute would consist of things such as fur color, age, or sex. To use a class
+											you need to initialize the object created from this class. Programming languages due this differently. For example, Python
+											would require the __init__() function to initialize an object. C# on the other hand has you create a class, then initialize it 
+											in your program. Below is an example of both.<br><br>
+											<img src="images/dog_class_c_python.JPG" style="display: block; margin-right: auto; margin-left: auto;"><br>
+											
+											<!--intro to methods-->
+											<strong>Methods</strong> are functions that are associated with a class object. In the section above we went over the creating
+											a dog class with attributes <i>Name</i> and <i>Breed</i>. We can also add methods to the class which would enable our dog to have
+											a bit more functionality.<br><br>
+											<img src="images/dog_method_c_python.JPG" style="display: block; margin-right: auto; margin-left: auto;"><br>
 
-											Spark has multiple programming languages it can process. It was natively built on Scala, but more recently 
-											added Java, Python, and R. It also supports a SQL like language which is Spark SQL which is dynamic in 
-											that it can process structured and semi-structured data (CSV, Parquet, JSON). Spark Streaming allows for 
-											real time analytical processing. It is not as powerful as Apache Storm, but for smaller scale tasks it 
-											can provide the compute power. It also supports MLlib, a machine learning library which supports different data science models. Lastly, there is GraphX which allows for in-depth graphing.<br><br>
-
-											<img src="images/spark_tools.png" style="display: block; margin-right: auto; margin-left: auto;" /><br><br>
-
-										<h2>Exercise: Exploratory Analysis on New York Taxi Dataset</h2>
+											<!--intro to attributes-->
+											<strong>Attributes</strong> are properties of a class that have data stored in the attribute fields. Usually attributes
+											are descriptive properties for the object. Above we saw that the Dog class has attributes <i>Name</i> and <i>Breed</i>. We
+											could also extend these attributes to non-descriptive properties such as e-mail, address, etc.,
+										</p><br>
+										<h2>Encapsulation</h2>
 										<p align="left" style="color:#545557;">
-											For this exercise create a new notebook in Databricks. You can get the dataset <a href="https://registry.opendata.aws/nyc-tlc-trip-records-pds/" target="_blank">HERE</a>. Parameterize 
-											the URL to dynamically load the data into a dataframe (i.e., multiple years and quarters). Clean and 
-											reformat the data to be in a professional level manner (remove nulls, column names, etc.,). Once you 
-											have the data in a workable fashion, get some simple statistics about the data. What datatypes are 
-											included in the data set? Columns? Mean, standard deviations, etc.,<br><br>
+										    <strong>Encapsulation</strong> is the first principal we will touch upon regarding OOP. This concept states that all important 
+											information is contained inside an object and only specified information is exposed. By doing so a user can bind data and methods into a
+											single entity and defining the scope of its operations. By encapsulating the data, it hides the complexity of entities by providing
+											objects to interact with instead of the variables themselves. This protects the object from undesirable external changes commonly referred
+											to as information hiding.
+										</p><br>
 
-											Next, pick two years you want to further analyze. Create at least three SQL queries and three python 
-											queries on the data. Be creative! The more curious you are the better your outcome will be!
-										</p>
+										<h2>Polymorphism</h2>
+										<p align="left" style="color:#545557;">
+											<strong>Polymorphism</strong> in the broadest sense it the ability to take on many forms. In OOP, polymorphism allows for child class objects
+											to take any form of its parent class hierarchy. As an example we could look at a person and student class. Student is a child of Person as 
+											everybody is a person but not all persons are students. The neat part about polymorphism is that each child class can have its own unique set of attributes
+											along with its shared parent class attributes. There are several types of polymorphism and to go more in depth I would suggest reading the article
+											linked below.
+										</p><br>
 									</header>
 								</article>
 							</div>
@@ -133,61 +127,31 @@
 					<div class="row aln-center">
 						<div class="col-4 col-12-medium">
 							<section class="highlight">
-								<a href="https://www.youtube.com/watch?v=TgiBvKcGL24&ab_channel=MelvinL" class="image featured" target="_blank"><img src="images/thumbnails/intro_to_apache_spark.webp" alt="" height=180/></a>
-								<h3><a href="https://www.youtube.com/watch?v=TgiBvKcGL24&ab_channel=MelvinL" target="_blank">Quick introduction to Apache Spark</a></h3>
-								<p>Video by Melvin L</p>
+								<a href="https://www.techtarget.com/searchapparchitecture/definition/object-oriented-programming-OOP#:~:text=Object%2Doriented%20programming%20(OOP)%20is%20a%20computer%20programming%20model,has%20unique%20attributes%20and%20behavior." class="image featured" target="_blank"><img src="images/thumbnails/tt_logo.jpg" alt="" height=180/></a>
+								<h3><a href="https://www.techtarget.com/searchapparchitecture/definition/object-oriented-programming-OOP#:~:text=Object%2Doriented%20programming%20(OOP)%20is%20a%20computer%20programming%20model,has%20unique%20attributes%20and%20behavior." target="_blank">What is Object Oriented Programming</a></h3>
+								<p>Article by TechTarget</p>
 								<ul class="actions">
-									<li><a href="https://www.youtube.com/watch?v=TgiBvKcGL24&ab_channel=MelvinL" class="button style1" target="_blank">Watch Video</a></li>
+									<li><a href="https://www.techtarget.com/searchapparchitecture/definition/object-oriented-programming-OOP#:~:text=Object%2Doriented%20programming%20(OOP)%20is%20a%20computer%20programming%20model,has%20unique%20attributes%20and%20behavior." class="button style1" target="_blank">Read Article</a></li>
 								</ul>
 							</section>
 						</div>
 						<div class="col-4 col-12-medium">
 							<section class="highlight">
-								<a href="https://www.youtube.com/watch?v=ThrmPaleEiI&ab_channel=HowItHappened" class="image featured" target="_blank"><img src="images/thumbnails/how_it_happened_databricks.webp" alt="" height=180/></a>
-								<h3><a href="https://www.youtube.com/watch?v=ThrmPaleEiI&ab_channel=HowItHappened" target="_blank">What is Databricks</a></h3>
-								<p>Video by How It Happened</p>
+								<a href="https://scoutapm.com/blog/what-is-encapsulation" class="image featured" target="_blank"><img src="images/thumbnails/scout_apm_logo.png" alt="" height=180/></a>
+								<h3><a href="https://scoutapm.com/blog/what-is-encapsulation" target="_blank">Encapsulation in OOP</a></h3>
+								<p>Article by Scout APM</p>
 								<ul class="actions">
-									<li><a href="https://www.youtube.com/watch?v=ThrmPaleEiI&ab_channel=HowItHappened" class="button style1" target="_blank">Watch Video</a></li>
+									<li><a href="https://scoutapm.com/blog/what-is-encapsulation" class="button style1" target="_blank">Read Article</a></li>
 								</ul>
 							</section>
 						</div>
 						<div class="col-4 col-12-medium">
 							<section class="highlight">
-								<a href="https://www.databricks.com/" class="image featured" target="_blank"><img src="images/thumbnails/databricks_logo.png" alt="" height=180/></a>
-								<h3><a href="https://www.databricks.com/" target="_blank">Databricks</a></h3>
-								<p>Official Website for Databricks</p>
+								<a href="https://medium.com/@shanikae/polymorphism-explained-simply-7294c8deeef7" class="image featured" target="_blank"><img src="images/thumbnails/medium_logo.jpg" alt="" height=180/></a>
+								<h3><a href="https://medium.com/@shanikae/polymorphism-explained-simply-7294c8deeef7" target="_blank">Polymorphism Explained Simply!</a></h3>
+								<p>Article by Medium</p>
 								<ul class="actions">
-									<li><a href="https://www.databricks.com/" class="button style1" target="_blank">Go To Databricks</a></li>
-								</ul>
-							</section>
-						</div>
-						<div class="col-4 col-12-medium">
-							<section class="highlight">
-								<a href="https://hevodata.com/learn/what-is-databricks/" class="image featured" target="_blank"><img src="images/thumbnails/hevo.png" alt="" height=180/></a>
-								<h3><a href="https://hevodata.com/learn/what-is-databricks/" target="_blank">Beginners Guide to Databricks</a></h3>
-								<p>Article by Hevo</p>
-								<ul class="actions">
-									<li><a href="https://hevodata.com/learn/what-is-databricks/" class="button style1" target="_blank">Read Article</a></li>
-								</ul>
-							</section>
-						</div>
-						<div class="col-4 col-12-medium">
-							<section class="highlight">
-								<a href="https://docs.databricks.com/" class="image featured" target="_blank"><img src="images/thumbnails/databricks_logo.png" alt="" height=180/></a>
-								<h3><a href="https://docs.databricks.com/" target="_blank">Databricks Documentation</a></h3>
-								<p>Official Documentation for Databricks</p>
-								<ul class="actions">
-									<li><a href="https://docs.databricks.com/" class="button style1" target="_blank">Read Documentation</a></li>
-								</ul>
-							</section>
-						</div>
-						<div class="col-4 col-12-medium">
-							<section class="highlight">
-								<a href="https://spark.apache.org/docs/latest/api/python/" class="image featured" target="_blank"><img src="images/thumbnails/pyspark_logo.jpeg" alt="" height=180/></a>
-								<h3><a href="https://spark.apache.org/docs/latest/api/python/" target="_blank">PySpark Documentation</a></h3>
-								<p>Official Documentation for PySPark</p>
-								<ul class="actions">
-									<li><a href="https://spark.apache.org/docs/latest/api/python/" class="button style1" target="_blank">Read Documentation</a></li>
+									<li><a href="https://medium.com/@shanikae/polymorphism-explained-simply-7294c8deeef7" class="button style1" target="_blank">Read Article</a></li>
 								</ul>
 							</section>
 						</div>
