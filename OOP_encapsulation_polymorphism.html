@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Databricks</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header" class="wrapper">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1><a href="#">Object Oriented Programming</a></h1>
+							<p>
+								In this section we will be covering the first two concepts of<br>
+								Object Oriented Programming (OOP). Here we will go over encapsulation<br>
+								and polymorphism. You can find the other OOP concepts in another module.
+							</p>
+						</div>
+
+					<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li class="current">
+								<a href="#">Modules</a>
+								<ul>
+									<li><a href="what_is_a_software_engineer.html">What is a Software Engineer</a></li>
+									<li><a href="agile_azure_devops.html">Agile / Azure / DevOps</a></li>
+									<li><a href="OOP_encapsulation_polymorphism.html">OOP - Encapsulation & Polymorphism</a></li>
+									<li><a href="#">OOP - Inheritance & Abstraction</a></li>
+									<li><a href="#">N-Tier Architecture</a></li>
+									<li><a href="#">REST APIs / Postman</a></li>
+									<li><a href="#">Test Driven Development</a></li>
+									<li><a href="#">SQL</a></li>
+									<li><a href="#">Databases</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Projects</a>
+								<ul>
+									<li><a href="#">SE Project</a></li>
+								</ul>
+							</li>
+							<!-- <li class="current"><a href="documents.html">Documents</a></li> -->
+						</ul>
+					</nav>
+
+				</section>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style2">
+					<div class="title"></div>
+					<div class="container">
+
+						<!-- Content -->
+							<div id="content">
+								<article class="box post">
+									<header class="style1">
+										<h2>Intro to Databricks</h2>
+										<p align="left" style="color:#545557;">
+											Databricks is a web-based platform that provides cluster management and Python notebook style files. It is extremely 
+											useful when analyzing big data as the platform is cloud based. This means that a computation that may be extremely 
+											hindering due to your personal computer hardware can now run-in seconds! Due to its cloud nature, it uses distributed 
+											computing on a cluster of machines. Like Hadoop, there is a driver node and workers. This is how we can complete 
+											complex calculations in seconds as the workload is spread across a network.<br><br>
+
+											<img src="images/master_worker.png" style="display: block; margin-right: auto; margin-left: auto;"><br>
+
+											Databricks also supports Lakehouse architecture. This means you can be extremely dynamic with your database as you have 
+											the option to use a data warehouse, data lake, or the lakehouse itself. We will discuss in depth the difference between 
+											each warehousing technique later. For now, just know that each type has their specific use case.<br><br>
+
+											Databricks runs on the Apache Spark API which allows for multiple programming languages to be used in a notebook. 
+											Some supported languages are SQL, Python, and R.<br><br>
+
+											<strong>Mini Exercise: Setting up your first workbook</strong><br>
+											<p align="left" style="margin-left:40px;color:#545557;">
+												1. Create a <a href="https://community.cloud.databricks.com/login.html" target="_blank">Databricks Community Edition</a> account.<br>
+												2. Navigate to the left hand menu. Under the Create tap, select Cluster<br>
+												3. Give your cluster an appropriate name. You can leave the rest of the settings as default. Then hit create<br>
+												4. Once you cluster has been successfully created (marked by a green check), return to the create tab and select notebook.<br>
+												5. Give your notebook an appropriate name, choose your default language (I recommend Python), and select the 
+												cluster you just created. Hit create and you are all set-up.<br>
+											</p>
+										</p>
+										<h2>Spark</h2>
+										<p align="left" style="color:#545557;">
+											Apache Spark is a fast, general purpose cluster computing system for large scale data processing. It uses high level
+											APIs in Java, Scala, Python, and R. It is suitable for both batch processing and streaming processing. The 
+											difference between the two is that batch processing is set to complete jobs at a specified time whereas 
+											streaming processing occurs in real time.<br><br>
+
+											Spark has multiple programming languages it can process. It was natively built on Scala, but more recently 
+											added Java, Python, and R. It also supports a SQL like language which is Spark SQL which is dynamic in 
+											that it can process structured and semi-structured data (CSV, Parquet, JSON). Spark Streaming allows for 
+											real time analytical processing. It is not as powerful as Apache Storm, but for smaller scale tasks it 
+											can provide the compute power. It also supports MLlib, a machine learning library which supports different data science models. Lastly, there is GraphX which allows for in-depth graphing.<br><br>
+
+											<img src="images/spark_tools.png" style="display: block; margin-right: auto; margin-left: auto;" /><br><br>
+
+										<h2>Exercise: Exploratory Analysis on New York Taxi Dataset</h2>
+										<p align="left" style="color:#545557;">
+											For this exercise create a new notebook in Databricks. You can get the dataset <a href="https://registry.opendata.aws/nyc-tlc-trip-records-pds/" target="_blank">HERE</a>. Parameterize 
+											the URL to dynamically load the data into a dataframe (i.e., multiple years and quarters). Clean and 
+											reformat the data to be in a professional level manner (remove nulls, column names, etc.,). Once you 
+											have the data in a workable fashion, get some simple statistics about the data. What datatypes are 
+											included in the data set? Columns? Mean, standard deviations, etc.,<br><br>
+
+											Next, pick two years you want to further analyze. Create at least three SQL queries and three python 
+											queries on the data. Be creative! The more curious you are the better your outcome will be!
+										</p>
+									</header>
+								</article>
+							</div>
+
+					</div>
+				</div>
+
+			<!-- links -->
+			<section id="highlights" class="wrapper style3">
+				<div class="title">Links</div>
+				<div class="container">
+					<div class="row aln-center">
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://www.youtube.com/watch?v=TgiBvKcGL24&ab_channel=MelvinL" class="image featured" target="_blank"><img src="images/thumbnails/intro_to_apache_spark.webp" alt="" height=180/></a>
+								<h3><a href="https://www.youtube.com/watch?v=TgiBvKcGL24&ab_channel=MelvinL" target="_blank">Quick introduction to Apache Spark</a></h3>
+								<p>Video by Melvin L</p>
+								<ul class="actions">
+									<li><a href="https://www.youtube.com/watch?v=TgiBvKcGL24&ab_channel=MelvinL" class="button style1" target="_blank">Watch Video</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://www.youtube.com/watch?v=ThrmPaleEiI&ab_channel=HowItHappened" class="image featured" target="_blank"><img src="images/thumbnails/how_it_happened_databricks.webp" alt="" height=180/></a>
+								<h3><a href="https://www.youtube.com/watch?v=ThrmPaleEiI&ab_channel=HowItHappened" target="_blank">What is Databricks</a></h3>
+								<p>Video by How It Happened</p>
+								<ul class="actions">
+									<li><a href="https://www.youtube.com/watch?v=ThrmPaleEiI&ab_channel=HowItHappened" class="button style1" target="_blank">Watch Video</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://www.databricks.com/" class="image featured" target="_blank"><img src="images/thumbnails/databricks_logo.png" alt="" height=180/></a>
+								<h3><a href="https://www.databricks.com/" target="_blank">Databricks</a></h3>
+								<p>Official Website for Databricks</p>
+								<ul class="actions">
+									<li><a href="https://www.databricks.com/" class="button style1" target="_blank">Go To Databricks</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://hevodata.com/learn/what-is-databricks/" class="image featured" target="_blank"><img src="images/thumbnails/hevo.png" alt="" height=180/></a>
+								<h3><a href="https://hevodata.com/learn/what-is-databricks/" target="_blank">Beginners Guide to Databricks</a></h3>
+								<p>Article by Hevo</p>
+								<ul class="actions">
+									<li><a href="https://hevodata.com/learn/what-is-databricks/" class="button style1" target="_blank">Read Article</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://docs.databricks.com/" class="image featured" target="_blank"><img src="images/thumbnails/databricks_logo.png" alt="" height=180/></a>
+								<h3><a href="https://docs.databricks.com/" target="_blank">Databricks Documentation</a></h3>
+								<p>Official Documentation for Databricks</p>
+								<ul class="actions">
+									<li><a href="https://docs.databricks.com/" class="button style1" target="_blank">Read Documentation</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://spark.apache.org/docs/latest/api/python/" class="image featured" target="_blank"><img src="images/thumbnails/pyspark_logo.jpeg" alt="" height=180/></a>
+								<h3><a href="https://spark.apache.org/docs/latest/api/python/" target="_blank">PySpark Documentation</a></h3>
+								<p>Official Documentation for PySPark</p>
+								<ul class="actions">
+									<li><a href="https://spark.apache.org/docs/latest/api/python/" class="button style1" target="_blank">Read Documentation</a></li>
+								</ul>
+							</section>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- footer -->
+				<section id="footer" class="wrapper style3">
+					<a href = "https://www.trudatasolutions.com/" target="_blank">
+						<img src="images/thumbnails/tru_data_banner.jpg" style="display: block; margin-right: auto; margin-left: auto;">
+					</a>
+						<div id="copyright">
+							<ul>
+								<li>&copy; truData Solutions.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
