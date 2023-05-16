@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Object Oriented Programming - Encapsulation & Polymorphism</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header" class="wrapper">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1><a href="#">Object Oriented Programming</a></h1>
+							<p>
+								In this section we will be covering the first two concepts of<br>
+								Object Oriented Programming (OOP). Here we will go over encapsulation<br>
+								and polymorphism. You can find the other OOP concepts in another module.
+							</p>
+						</div>
+
+					<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li class="current">
+								<a href="#">Modules</a>
+								<ul>
+									<li><a href="what_is_a_software_engineer.html">What is a Software Engineer</a></li>
+									<li><a href="agile_azure_devops.html">Agile / Azure / DevOps</a></li>
+									<li><a href="OOP_encapsulation_polymorphism.html">OOP - Encapsulation & Polymorphism</a></li>
+									<li><a href="#">OOP - Inheritance & Abstraction</a></li>
+									<li><a href="#">N-Tier Architecture</a></li>
+									<li><a href="#">REST APIs / Postman</a></li>
+									<li><a href="#">Test Driven Development</a></li>
+									<li><a href="#">SQL</a></li>
+									<li><a href="#">Databases</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Projects</a>
+								<ul>
+									<li><a href="#">SE Project</a></li>
+								</ul>
+							</li>
+							<!-- <li class="current"><a href="documents.html">Documents</a></li> -->
+						</ul>
+					</nav>
+
+				</section>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style2">
+					<div class="title"></div>
+					<div class="container">
+
+						<!-- Content -->
+							<div id="content">
+								<article class="box post">
+									<header class="style1">
+										<h2>What is Object Oriented Programming</h2>
+										<p align="left" style="color:#545557;">
+											Object Oriented Programming or OOP for short is the practice of organizing software design
+											around objects rather than functions and logic. OOP focuses on the objects the developers
+											want to manipulate rather than the logic to manipulate them. This approach is well suited
+											for projects tha are large, complex, and actively updated and maintained.
+										</p>
+										<p align="left" style="color:#545557;">
+											OOP also follows a general structure. This includes <strong>classes</strong>, <strong>objects</strong>,
+											<strong>methods</strong>, and <strong>attributes</strong>.<br><br>
+											<!--intro to classes-->
+											<strong>Classes</strong> are a data structure that act as a blueprint for an individual object, methods, and attributes.
+											An example of a class would be a "Dog". The Dog class will consist of methods and attributes. A method could be an action
+											such as bark, scratch, or jump while an attribute would consist of things such as fur color, age, or sex. To use a class
+											you need to initialize the object created from this class. Programming languages due this differently. For example, Python
+											would require the __init__() function to initialize an object. C# on the other hand has you create a class, then initialize it 
+											in your program. Below is an example of both.<br><br>
+											<img src="images/dog_class_c_python.JPG" style="display: block; margin-right: auto; margin-left: auto;"><br>
+											
+											<!--intro to methods-->
+											<strong>Methods</strong> are functions that are associated with a class object. In the section above we went over the creating
+											a dog class with attributes <i>Name</i> and <i>Breed</i>. We can also add methods to the class which would enable our dog to have
+											a bit more functionality.<br><br>
+											<img src="images/dog_method_c_python.JPG" style="display: block; margin-right: auto; margin-left: auto;"><br>
+
+											<!--intro to attributes-->
+											<strong>Attributes</strong> are properties of a class that have data stored in the attribute fields. Usually attributes
+											are descriptive properties for the object. Above we saw that the Dog class has attributes <i>Name</i> and <i>Breed</i>. We
+											could also extend these attributes to non-descriptive properties such as e-mail, address, etc.,
+										</p><br>
+										<h2>Encapsulation</h2>
+										<p align="left" style="color:#545557;">
+										    <strong>Encapsulation</strong> is the first principal we will touch upon regarding OOP. This concept states that all important 
+											information is contained inside an object and only specified information is exposed. By doing so a user can bind data and methods into a
+											single entity and defining the scope of its operations. By encapsulating the data, it hides the complexity of entities by providing
+											objects to interact with instead of the variables themselves. This protects the object from undesirable external changes commonly referred
+											to as information hiding.
+										</p><br>
+
+										<h2>Polymorphism</h2>
+										<p align="left" style="color:#545557;">
+											<strong>Polymorphism</strong> in the broadest sense it the ability to take on many forms. In OOP, polymorphism allows for child class objects
+											to take any form of its parent class hierarchy. As an example we could look at a person and student class. Student is a child of Person as 
+											everybody is a person but not all persons are students. The neat part about polymorphism is that each child class can have its own unique set of attributes
+											along with its shared parent class attributes. There are several types of polymorphism and to go more in depth I would suggest reading the article
+											linked below.
+										</p><br>
+									</header>
+								</article>
+							</div>
+
+					</div>
+				</div>
+
+			<!-- links -->
+			<section id="highlights" class="wrapper style3">
+				<div class="title">Links</div>
+				<div class="container">
+					<div class="row aln-center">
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://www.techtarget.com/searchapparchitecture/definition/object-oriented-programming-OOP#:~:text=Object%2Doriented%20programming%20(OOP)%20is%20a%20computer%20programming%20model,has%20unique%20attributes%20and%20behavior." class="image featured" target="_blank"><img src="images/thumbnails/tt_logo.jpg" alt="" height=180/></a>
+								<h3><a href="https://www.techtarget.com/searchapparchitecture/definition/object-oriented-programming-OOP#:~:text=Object%2Doriented%20programming%20(OOP)%20is%20a%20computer%20programming%20model,has%20unique%20attributes%20and%20behavior." target="_blank">What is Object Oriented Programming</a></h3>
+								<p>Article by TechTarget</p>
+								<ul class="actions">
+									<li><a href="https://www.techtarget.com/searchapparchitecture/definition/object-oriented-programming-OOP#:~:text=Object%2Doriented%20programming%20(OOP)%20is%20a%20computer%20programming%20model,has%20unique%20attributes%20and%20behavior." class="button style1" target="_blank">Read Article</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://scoutapm.com/blog/what-is-encapsulation" class="image featured" target="_blank"><img src="images/thumbnails/scout_apm_logo.png" alt="" height=180/></a>
+								<h3><a href="https://scoutapm.com/blog/what-is-encapsulation" target="_blank">Encapsulation in OOP</a></h3>
+								<p>Article by Scout APM</p>
+								<ul class="actions">
+									<li><a href="https://scoutapm.com/blog/what-is-encapsulation" class="button style1" target="_blank">Read Article</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://medium.com/@shanikae/polymorphism-explained-simply-7294c8deeef7" class="image featured" target="_blank"><img src="images/thumbnails/medium_logo.jpg" alt="" height=180/></a>
+								<h3><a href="https://medium.com/@shanikae/polymorphism-explained-simply-7294c8deeef7" target="_blank">Polymorphism Explained Simply!</a></h3>
+								<p>Article by Medium</p>
+								<ul class="actions">
+									<li><a href="https://medium.com/@shanikae/polymorphism-explained-simply-7294c8deeef7" class="button style1" target="_blank">Read Article</a></li>
+								</ul>
+							</section>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- footer -->
+				<section id="footer" class="wrapper style3">
+					<a href = "https://www.trudatasolutions.com/" target="_blank">
+						<img src="images/thumbnails/tru_data_banner.jpg" style="display: block; margin-right: auto; margin-left: auto;">
+					</a>
+						<div id="copyright">
+							<ul>
+								<li>&copy; truData Solutions.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
