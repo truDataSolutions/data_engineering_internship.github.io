@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Object Oriented Programming - Encapsulation & Polymorphism</title>
+		<title>Object Oriented Programming - Abstraction & Inheritance</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -96,22 +96,25 @@
 											are descriptive properties for the object. Above we saw that the Dog class has attributes <i>Name</i> and <i>Breed</i>. We
 											could also extend these attributes to non-descriptive properties such as e-mail, address, etc.,
 										</p><br>
-										<h2>Encapsulation</h2>
+										<h2>Abstraction</h2>
 										<p align="left" style="color:#545557;">
-										    <strong>Encapsulation</strong> is the first principal we will touch upon regarding OOP. This concept states that all important 
-											information is contained inside an object and only specified information is exposed. By doing so a user can bind data and methods into a
-											single entity and defining the scope of its operations. By encapsulating the data, it hides the complexity of entities by providing
-											objects to interact with instead of the variables themselves. This protects the object from undesirable external changes commonly referred
-											to as information hiding.
+										    <strong>Abstraction</strong> is the process of removing or hiding something to reduce it to a set of essential characteristics.
+											Through abstractions, a programmer can hide all but the relevant data about an object in order to reduce complexity and increase
+											efficiency. A good example here would be you are meeting someone on a dating app. On the app you can see their hair color, height,
+											age, and perhaps a hobby they have. What is hidden from you is their social security number, their address, and other sensitive
+											information.
 										</p><br>
 
-										<h2>Polymorphism</h2>
+										<h2>Inheritance</h2>
 										<p align="left" style="color:#545557;">
-											<strong>Polymorphism</strong> in the broadest sense it the ability to take on many forms. In OOP, polymorphism allows for child class objects
-											to take any form of its parent class hierarchy. As an example we could look at a person and student class. Student is a child of Person as 
-											everybody is a person but not all persons are students. The neat part about polymorphism is that each child class can have its own unique set of attributes
-											along with its shared parent class attributes. There are several types of polymorphism and to go more in depth I would suggest reading the article
-											linked below.
+											<strong>Inheritance</strong> is perhaps the simplest and most straightforward concept of OOP to understand. It allows programmers
+											to create class hierarchies, where classes and objects <strong>inherit</strong> properties and behaviors from their parent class.
+											The parent class is the superclass while the child class is often referred to as the subclass. The key feature of inheritance is
+											reusability. A good example would be the person class as parent and teach or any kid of job as a child. Every person needs the
+											same basic function which could be sleep(), eat(), drink(), etc. This means we could use the parent class as to no re-write these
+											functions several time. We then have the teach subclass which inherits from the person class. Here we would have functions that
+											are unique to a teach such as teachClass(), roleCall(), etc. This ultimately reduces overall complexity and allows you the programmer
+											to complete tasks much faster!
 										</p><br>
 									</header>
 								</article>
@@ -137,21 +140,21 @@
 						</div>
 						<div class="col-4 col-12-medium">
 							<section class="highlight">
-								<a href="https://scoutapm.com/blog/what-is-encapsulation" class="image featured" target="_blank"><img src="images/thumbnails/scout_apm_logo.png" alt="" height=180/></a>
-								<h3><a href="https://scoutapm.com/blog/what-is-encapsulation" target="_blank">Encapsulation in OOP</a></h3>
-								<p>Article by Scout APM</p>
+								<a href="https://www.techtarget.com/whatis/definition/abstraction#:~:text=In%20object%2Doriented%20programming%2C%20abstraction,reduce%20complexity%20and%20increase%20efficiency." class="image featured" target="_blank"><img src="images/thumbnails/tt_logo.jpg" alt="" height=180/></a>
+								<h3><a href="https://www.techtarget.com/whatis/definition/abstraction#:~:text=In%20object%2Doriented%20programming%2C%20abstraction,reduce%20complexity%20and%20increase%20efficiency." target="_blank">What is Abstraction</a></h3>
+								<p>Article by TechTarget</p>
 								<ul class="actions">
-									<li><a href="https://scoutapm.com/blog/what-is-encapsulation" class="button style1" target="_blank">Read Article</a></li>
+									<li><a href="https://www.techtarget.com/whatis/definition/abstraction#:~:text=In%20object%2Doriented%20programming%2C%20abstraction,reduce%20complexity%20and%20increase%20efficiency." class="button style1" target="_blank">Read Article</a></li>
 								</ul>
 							</section>
 						</div>
 						<div class="col-4 col-12-medium">
 							<section class="highlight">
-								<a href="https://medium.com/@shanikae/polymorphism-explained-simply-7294c8deeef7" class="image featured" target="_blank"><img src="images/thumbnails/medium_logo.jpg" alt="" height=180/></a>
-								<h3><a href="https://medium.com/@shanikae/polymorphism-explained-simply-7294c8deeef7" target="_blank">Polymorphism Explained Simply!</a></h3>
+								<a href="https://medium.com/@andrewkoenigbautista/inheritance-in-object-oriented-programming-d8808bca5021" class="image featured" target="_blank"><img src="images/thumbnails/medium_logo.jpg" alt="" height=180/></a>
+								<h3><a href="https://medium.com/@andrewkoenigbautista/inheritance-in-object-oriented-programming-d8808bca5021" target="_blank">Inheritance Explained Simply!</a></h3>
 								<p>Article by Medium</p>
 								<ul class="actions">
-									<li><a href="https://medium.com/@shanikae/polymorphism-explained-simply-7294c8deeef7" class="button style1" target="_blank">Read Article</a></li>
+									<li><a href="https://medium.com/@andrewkoenigbautista/inheritance-in-object-oriented-programming-d8808bca5021" class="button style1" target="_blank">Read Article</a></li>
 								</ul>
 							</section>
 						</div>
