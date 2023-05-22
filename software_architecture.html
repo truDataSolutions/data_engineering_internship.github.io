@@ -19,11 +19,10 @@
 
 					<!-- Logo -->
 						<div id="logo">
-							<h1><a href="#">Object Oriented Programming</a></h1>
+							<h1><a href="#">Software Architectures</a></h1>
 							<p>
-								In this section we will be covering the first two concepts of<br>
-								Object Oriented Programming (OOP). Here we will go over encapsulation<br>
-								and polymorphism. You can find the other OOP concepts in another module.
+								In this section we will go over a few of the different kinds<br>
+								of software architectures and use cases for each
 							</p>
 						</div>
 
@@ -66,56 +65,83 @@
 							<div id="content">
 								<article class="box post">
 									<header class="style1">
-										<h2>What is Object Oriented Programming</h2>
+										<h2>What is Software Architecture</h2>
 										<p align="left" style="color:#545557;">
-											Object Oriented Programming or OOP for short is the practice of organizing software design
-											around objects rather than functions and logic. OOP focuses on the objects the developers
-											want to manipulate rather than the logic to manipulate them. This approach is well suited
-											for projects tha are large, complex, and actively updated and maintained.
-										</p>
-										<p align="left" style="color:#545557;">
-											OOP also follows a general structure. This includes <strong>classes</strong>, <strong>objects</strong>,
-											<strong>methods</strong>, and <strong>attributes</strong>.<br><br>
-											<!--intro to classes-->
-											<strong>Classes</strong> are a data structure that act as a blueprint for an individual object, methods, and attributes.
-											An example of a class would be a "Dog". The Dog class will consist of methods and attributes. A method could be an action
-											such as bark, scratch, or jump while an attribute would consist of things such as fur color, age, or sex. To use a class
-											you need to initialize the object created from this class. Programming languages due this differently. For example, Python
-											would require the __init__() function to initialize an object. C# on the other hand has you create a class, then initialize it 
-											in your program. Below is an example of both.<br><br>
-											<img src="images/dog_class_c_python.JPG" style="display: block; margin-right: auto; margin-left: auto;"><br>
+											Software architecture is the patterns used to scale and meet user' demands for a given application. There are several
+											different kinds of software architectural patterns to follow, but there is not a single that is better than all the others,
+											each has their specific use cases. Here we will discuss n-tier architecture, microservice architecture, and event driven architecture.<br><br>
 											
-											<!--intro to methods-->
-											<strong>Methods</strong> are functions that are associated with a class object. In the section above we went over the creating
-											a dog class with attributes <i>Name</i> and <i>Breed</i>. We can also add methods to the class which would enable our dog to have
-											a bit more functionality.<br><br>
-											<img src="images/dog_method_c_python.JPG" style="display: block; margin-right: auto; margin-left: auto;"><br>
+											You can think of a software architecture pattern as a blueprint for a project. However, its a reusable solutions as each
+											pattern has a predefined set of subsystems, roles, and responsibilities. Having the knowledge of different patterns allows
+											you to address concerns in regards to performance, limitations, and minimizing business risk.<br><br>
 
-											<!--intro to attributes-->
-											<strong>Attributes</strong> are properties of a class that have data stored in the attribute fields. Usually attributes
-											are descriptive properties for the object. Above we saw that the Dog class has attributes <i>Name</i> and <i>Breed</i>. We
-											could also extend these attributes to non-descriptive properties such as e-mail, address, etc.,
-										</p><br>
-										<h2>Abstraction</h2>
+											Software architecture also play a vital role in any software application and here is why:<br>
+											- <strong><i>Defines basic characteristics of an application</i></strong><br>
+											- <strong><i>Maintains quality and efficiency</i></strong><br>
+											- <strong><i>Provides agility</i></strong><br>
+											- <strong><i>Problem solving</i></strong><br>
+											- <strong><i>Enhances productivity</i></strong>
+										</p>
+										<!--Layered architecture-->
+										<h2>N-Tier Architecture</h2>
 										<p align="left" style="color:#545557;">
-										    <strong>Abstraction</strong> is the process of removing or hiding something to reduce it to a set of essential characteristics.
-											Through abstractions, a programmer can hide all but the relevant data about an object in order to reduce complexity and increase
-											efficiency. A good example here would be you are meeting someone on a dating app. On the app you can see their hair color, height,
-											age, and perhaps a hobby they have. What is hidden from you is their social security number, their address, and other sensitive
-											information.
+											N-tiered architecture (also known as layered architecture and tiered architecture) is the most common software architecture
+											pattern today. It simplifies the increasing complexity of modern applications and promotes the agile framework which benefits
+											DevOps environments and other methodologies that utilize agile. So why is this architecture patterned named the way it is?
+											Well, that is because it consists of several layers, each of which hold their own service or integration to the overall application.
+											Because each layer is separated, it makes it much easier to edit the layer without changing the overall architecture.
+											We will look at a very simple example of a 3-tiered architecture below.
 										</p><br>
+										<ul class="style2">
+											<li><strong>Presentation Layer</strong></li>
+											<p align="left" style="color:#545557;">
+												The presentation layer is the top layer of this architecture pattern. Here we have how the content is presented to the user
+												through a GUI. This tier can be accessed through any kind of device (tablet, laptop, desktop, etc.,) and must interact with
+												a web browser to display the page the user is targeting. To present the content it is essential for this tier to speak to 
+												other tiers in the architecture that precede it.
+											</p>
+											<li><strong>Application Layer</strong></li>
+											<p align="left" style="color:#545557;">
+												The application (or logic) layer is the middle tier of the 3-layer architecture pattern. Here is where the applications business logic is ran.
+												Business logic it the set of rules that are required for running the application as per the guidelines laid down by
+												the lead organization.
+											</p>
+											<li><strong>Data Layer</strong></li>
+											<p align="left" style="color:#545557;">
+												The data layer is the bottom most layer in the 3-tier architecture pattern. Here we see how the data is stored and 
+												retrieved for the application. Typically we see the data stored on a database server or any other form of media device
+												that supports access logic and provides the necessary steps to ensure only the data is exposed and not any form of
+												sensitive information(such as access to the underlying system). This is generally done by the data layer providing an
+												API token to the Application layer. The use of the API ensures complete transparency to the data operations being performed
+												without affected the application tier.
+											</p>
+										</ul>
+										<img src="images/thumbnails/3tier.png">
+										<p align="left" style="color:#545557;">
+											A 3-tier architecture pattern is a simple example of n-tier architecture. However, it is possible for it to become much more
+											complex. You can create a multi-tier architecture (hence why the name is n-tier as you can continue to add layers) by splitting
+											the application layer further. Due to the extra dimension in the application layer, in theory it becomes more scalable and adds
+											additional dimensions of functionality.<br><br>
 
-										<h2>Inheritance</h2>
-										<p align="left" style="color:#545557;">
-											<strong>Inheritance</strong> is perhaps the simplest and most straightforward concept of OOP to understand. It allows programmers
-											to create class hierarchies, where classes and objects <strong>inherit</strong> properties and behaviors from their parent class.
-											The parent class is the superclass while the child class is often referred to as the subclass. The key feature of inheritance is
-											reusability. A good example would be the person class as parent and teach or any kid of job as a child. Every person needs the
-											same basic function which could be sleep(), eat(), drink(), etc. This means we could use the parent class as to no re-write these
-											functions several time. We then have the teach subclass which inherits from the person class. Here we would have functions that
-											are unique to a teach such as teachClass(), roleCall(), etc. This ultimately reduces overall complexity and allows you the programmer
-											to complete tasks much faster!
+											Now we understand what tiered architecture is, how what are its benefits? Well, the primary benefit (as stated before), is the fact
+											that due to the layers being separated it allows for you to maintain and manage each layer accordingly without interfering with the
+											other layers. In addition, the multi-layered approach is particularly good for developing web-scale, production-grade, and
+											cloud-hosted applications very quickly.
 										</p><br>
+										<h2>Microservice Architecture</h2>
+										<p align="left" style="color:#545557;">
+											A microservice architecture pattern is one where the system has multiple services that each are responsible for
+											a discrete task. These service can comminate with each other in order to solve a larger complex business task.
+										</p><br>
+										<h2>Event-driven Architecture</h2>
+										<p align="left" style="color:#545557;">
+											Event-drive architecture is a design pattern built to record, transmit, and process events through a decoupling.
+											This means that the systems don't need to know about each other to share information and accomplish tasks.
+											Decoupling offers a major advantage over other data sharing methods such as APIs. With decoupling, an event
+											producer sends its notification without needing to know what happens after (whereas an API will always have
+											a request and response). This leaves the rest of the event up to the event-router (as known as a broker) to
+											decide where the data needs to go.
+										</p>
 									</header>
 								</article>
 							</div>
@@ -130,31 +156,31 @@
 					<div class="row aln-center">
 						<div class="col-4 col-12-medium">
 							<section class="highlight">
-								<a href="https://www.techtarget.com/searchapparchitecture/definition/object-oriented-programming-OOP#:~:text=Object%2Doriented%20programming%20(OOP)%20is%20a%20computer%20programming%20model,has%20unique%20attributes%20and%20behavior." class="image featured" target="_blank"><img src="images/thumbnails/tt_logo.jpg" alt="" height=180/></a>
-								<h3><a href="https://www.techtarget.com/searchapparchitecture/definition/object-oriented-programming-OOP#:~:text=Object%2Doriented%20programming%20(OOP)%20is%20a%20computer%20programming%20model,has%20unique%20attributes%20and%20behavior." target="_blank">What is Object Oriented Programming</a></h3>
-								<p>Article by TechTarget</p>
+								<a href="https://www.simform.com/blog/software-architecture-patterns/#:~:text=Famous%20examples%20of%20architectural%20patterns,and%20presentation%2Dabstraction%2Dcontrol." class="image featured" target="_blank"><img src="images/thumbnails/simform_logo.jpg" alt="" height=180/></a>
+								<h3><a href="https://www.simform.com/blog/software-architecture-patterns/#:~:text=Famous%20examples%20of%20architectural%20patterns,and%20presentation%2Dabstraction%2Dcontrol." target="_blank">Software Architecture Patterns</a></h3>
+								<p>Article by Simform</p>
 								<ul class="actions">
-									<li><a href="https://www.techtarget.com/searchapparchitecture/definition/object-oriented-programming-OOP#:~:text=Object%2Doriented%20programming%20(OOP)%20is%20a%20computer%20programming%20model,has%20unique%20attributes%20and%20behavior." class="button style1" target="_blank">Read Article</a></li>
+									<li><a href="https://www.simform.com/blog/software-architecture-patterns/#:~:text=Famous%20examples%20of%20architectural%20patterns,and%20presentation%2Dabstraction%2Dcontrol." class="button style1" target="_blank">Read Article</a></li>
 								</ul>
 							</section>
 						</div>
 						<div class="col-4 col-12-medium">
 							<section class="highlight">
-								<a href="https://www.techtarget.com/whatis/definition/abstraction#:~:text=In%20object%2Doriented%20programming%2C%20abstraction,reduce%20complexity%20and%20increase%20efficiency." class="image featured" target="_blank"><img src="images/thumbnails/tt_logo.jpg" alt="" height=180/></a>
-								<h3><a href="https://www.techtarget.com/whatis/definition/abstraction#:~:text=In%20object%2Doriented%20programming%2C%20abstraction,reduce%20complexity%20and%20increase%20efficiency." target="_blank">What is Abstraction</a></h3>
-								<p>Article by TechTarget</p>
+								<a href="https://hub.packtpub.com/what-is-multi-layered-software-architecture/" class="image featured" target="_blank"><img src="images/thumbnails/packthub_logo.png" alt="" height=180/></a>
+								<h3><a href="https://hub.packtpub.com/what-is-multi-layered-software-architecture/" target="_blank">Multi-layer Architecture Explained</a></h3>
+								<p>Article by packthub</p>
 								<ul class="actions">
-									<li><a href="https://www.techtarget.com/whatis/definition/abstraction#:~:text=In%20object%2Doriented%20programming%2C%20abstraction,reduce%20complexity%20and%20increase%20efficiency." class="button style1" target="_blank">Read Article</a></li>
+									<li><a href="https://hub.packtpub.com/what-is-multi-layered-software-architecture/" class="button style1" target="_blank">Read Article</a></li>
 								</ul>
 							</section>
 						</div>
 						<div class="col-4 col-12-medium">
 							<section class="highlight">
-								<a href="https://medium.com/@andrewkoenigbautista/inheritance-in-object-oriented-programming-d8808bca5021" class="image featured" target="_blank"><img src="images/thumbnails/medium_logo.jpg" alt="" height=180/></a>
-								<h3><a href="https://medium.com/@andrewkoenigbautista/inheritance-in-object-oriented-programming-d8808bca5021" target="_blank">Inheritance Explained Simply!</a></h3>
+								<a href="https://medium.com/hashmapinc/the-what-why-and-how-of-a-microservices-architecture-4179579423a9" class="image featured" target="_blank"><img src="images/thumbnails/medium_logo.jpg" alt="" height=180/></a>
+								<h3><a href="https://medium.com/hashmapinc/the-what-why-and-how-of-a-microservices-architecture-4179579423a9" target="_blank">What is Microservice Architecture</a></h3>
 								<p>Article by Medium</p>
 								<ul class="actions">
-									<li><a href="https://medium.com/@andrewkoenigbautista/inheritance-in-object-oriented-programming-d8808bca5021" class="button style1" target="_blank">Read Article</a></li>
+									<li><a href="https://medium.com/hashmapinc/the-what-why-and-how-of-a-microservices-architecture-4179579423a9" class="button style1" target="_blank">Read Article</a></li>
 								</ul>
 							</section>
 						</div>
