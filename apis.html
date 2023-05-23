@@ -65,82 +65,68 @@
 							<div id="content">
 								<article class="box post">
 									<header class="style1">
-										<h2>What is Software Architecture</h2>
+										<h2>What is an API</h2>
 										<p align="left" style="color:#545557;">
-											Software architecture is the patterns used to scale and meet user' demands for a given application. There are several
-											different kinds of software architectural patterns to follow, but there is not a single that is better than all the others,
-											each has their specific use cases. Here we will discuss n-tier architecture, microservice architecture, and event driven architecture.<br><br>
-											
-											You can think of a software architecture pattern as a blueprint for a project. However, its a reusable solutions as each
-											pattern has a predefined set of subsystems, roles, and responsibilities. Having the knowledge of different patterns allows
-											you to address concerns in regards to performance, limitations, and minimizing business risk.<br><br>
-
-											Software architecture also play a vital role in any software application and here is why:<br>
-											- <strong><i>Defines basic characteristics of an application</i></strong><br>
-											- <strong><i>Maintains quality and efficiency</i></strong><br>
-											- <strong><i>Provides agility</i></strong><br>
-											- <strong><i>Problem solving</i></strong><br>
-											- <strong><i>Enhances productivity</i></strong>
-										</p>
-										<!--Layered architecture-->
-										<h2>N-Tier Architecture</h2>
-										<p align="left" style="color:#545557;">
-											N-tiered architecture (also known as layered architecture and tiered architecture) is the most common software architecture
-											pattern today. It simplifies the increasing complexity of modern applications and promotes the agile framework which benefits
-											DevOps environments and other methodologies that utilize agile. So why is this architecture patterned named the way it is?
-											Well, that is because it consists of several layers, each of which hold their own service or integration to the overall application.
-											Because each layer is separated, it makes it much easier to edit the layer without changing the overall architecture.
-											We will look at a very simple example of a 3-tiered architecture below.
+											An Application Programming Interface or API for short, is how systems communicate with one
+											another without knowing about each other explicitly. They are a set of protocols for
+											building and integrating application software. Generally, APIs are a part of a server that receives
+											requests and sends responses. Most companies/websites have some kind of API available to the
+											public. However, it is possible for companies to have private APIs which do not allow public 
+											access. It is all dependent on the APIs security management.<br><br>
+											Applications that call APIs were traditionally written specific different programming languages. Web APIs
+											can be called through any programming language, but webpages created in HTML or application generator tools
+											can access them too.
 										</p><br>
-										<ul class="style2">
-											<li><strong>Presentation Layer</strong></li>
-											<p align="left" style="color:#545557;">
-												The presentation layer is the top layer of this architecture pattern. Here we have how the content is presented to the user
-												through a GUI. This tier can be accessed through any kind of device (tablet, laptop, desktop, etc.,) and must interact with
-												a web browser to display the page the user is targeting. To present the content it is essential for this tier to speak to 
-												other tiers in the architecture that precede it.
-											</p>
-											<li><strong>Application Layer</strong></li>
-											<p align="left" style="color:#545557;">
-												The application (or logic) layer is the middle tier of the 3-layer architecture pattern. Here is where the applications business logic is ran.
-												Business logic it the set of rules that are required for running the application as per the guidelines laid down by
-												the lead organization.
-											</p>
-											<li><strong>Data Layer</strong></li>
-											<p align="left" style="color:#545557;">
-												The data layer is the bottom most layer in the 3-tier architecture pattern. Here we see how the data is stored and 
-												retrieved for the application. Typically we see the data stored on a database server or any other form of media device
-												that supports access logic and provides the necessary steps to ensure only the data is exposed and not any form of
-												sensitive information(such as access to the underlying system). This is generally done by the data layer providing an
-												API token to the Application layer. The use of the API ensures complete transparency to the data operations being performed
-												without affected the application tier.
-											</p>
-										</ul>
-										<img src="images/thumbnails/3tier.png">
+										<h2>How APIs Work</h2>
 										<p align="left" style="color:#545557;">
-											A 3-tier architecture pattern is a simple example of n-tier architecture. However, it is possible for it to become much more
-											complex. You can create a multi-tier architecture (hence why the name is n-tier as you can continue to add layers) by splitting
-											the application layer further. Due to the extra dimension in the application layer, in theory it becomes more scalable and adds
-											additional dimensions of functionality.<br><br>
-
-											Now we understand what tiered architecture is, how what are its benefits? Well, the primary benefit (as stated before), is the fact
-											that due to the layers being separated it allows for you to maintain and manage each layer accordingly without interfering with the
-											other layers. In addition, the multi-layered approach is particularly good for developing web-scale, production-grade, and
-											cloud-hosted applications very quickly.
-										</p><br>
-										<h2>Microservice Architecture</h2>
+											APIs are made of two related elements:<br>
+											- A specification that describes how information is exchanged between programs in the form of a request.<br>
+											- A software interface written to that specification and published in some way of use.<br>
+											Software that want to access what the API has to offer is said to call it, and the software tha creates
+											the API is said to publish it. APIs provide an audit trail whether it is a public, private, or partnered API
+											as you are required to have a token to access them. APIs have predefined roles that govern what service can
+											specifically be accessed and granted.
+										</p><br><br>
+										<h2>REST APIs</h2>
 										<p align="left" style="color:#545557;">
-											A microservice architecture pattern is one where the system has multiple services that each are responsible for
-											a discrete task. These service can comminate with each other in order to solve a larger complex business task.
-										</p><br>
-										<h2>Event-driven Architecture</h2>
-										<p align="left" style="color:#545557;">
-											Event-drive architecture is a design pattern built to record, transmit, and process events through a decoupling.
-											This means that the systems don't need to know about each other to share information and accomplish tasks.
-											Decoupling offers a major advantage over other data sharing methods such as APIs. With decoupling, an event
-											producer sends its notification without needing to know what happens after (whereas an API will always have
-											a request and response). This leaves the rest of the event up to the event-router (as known as a broker) to
-											decide where the data needs to go.
+											The most common architectures of APIs are Representational State Transfer (or REST) and Simple Object Access
+											Protocol (or SOAP). Here we will touch upon both, but will go into much further detail regarding REST
+											APIs. SOAP is a protocol that follows a strict standard to allow communication between the client and 
+											the server. REST on the other hand is an architectural style tha doesn't follow any strict standard but
+											follows six general constraints defined by Roy Fielding in his dissertation 
+											<a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf"><i>Architectural Styles and the Design of Network-based Software Architecture</i></a>.
+											In his disseration, Fielding states that a REST API must be:
+											<ul class="style3">
+												<li><strong>Uniform Interface</strong></li>
+												<p align="left" style="color:#545557;">
+													This constraint is core to the design of RESTful APIs and includes 4 facets:<br>
+													<strong>Resource identification in requests</strong><br>
+													<strong>Resource manipulation through representation</strong><br>
+												</p>
+												<li><strong>Client-Server Architecture</strong></li>
+												<p align="left" style="color:#545557;">
+													REST architecture is composed of clients, servers, and resources, and it handles requests
+													through HTTP.
+												</p>
+												<li><strong>Stateless</strong></li>
+												<p align="left" style="color:#545557;">
+													No client content is stored on the server between requests. Information about the session
+													state is, instead, held with the client.
+												</p>
+												<li><strong>Cacheable</strong></li>
+												<p align="left" style="color:#545557;">
+													Caching can eliminate the need for some client-server interactions.
+												</p>
+												<li><strong>Layered System</strong></li>
+												<p align="left" style="color:#545557;">
+													Client-server interactions can be mediated by additional layers. These layers could offer
+													additional features like load balancing, shared caches, or security.
+												</p>
+												<li><strong>Code on Demand</strong></li>
+												<p align="left" style="color:#545557;">
+													Servers can extend the functionality of a client by transferring executable code.
+												</p>
+											</ul>
 										</p>
 									</header>
 								</article>
