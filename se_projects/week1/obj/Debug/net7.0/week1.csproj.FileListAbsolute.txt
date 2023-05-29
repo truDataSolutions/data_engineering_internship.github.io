@@ -1,0 +1,15 @@
+/Users/sbeauvais/Desktop/truData/truData_Projects/engineering_internship/se_projects/week1/bin/Debug/net7.0/week1
+/Users/sbeauvais/Desktop/truData/truData_Projects/engineering_internship/se_projects/week1/bin/Debug/net7.0/week1.deps.json
+/Users/sbeauvais/Desktop/truData/truData_Projects/engineering_internship/se_projects/week1/bin/Debug/net7.0/week1.runtimeconfig.json
+/Users/sbeauvais/Desktop/truData/truData_Projects/engineering_internship/se_projects/week1/bin/Debug/net7.0/week1.dll
+/Users/sbeauvais/Desktop/truData/truData_Projects/engineering_internship/se_projects/week1/bin/Debug/net7.0/week1.pdb
+/Users/sbeauvais/Desktop/truData/truData_Projects/engineering_internship/se_projects/week1/obj/Debug/net7.0/week1.csproj.AssemblyReference.cache
+/Users/sbeauvais/Desktop/truData/truData_Projects/engineering_internship/se_projects/week1/obj/Debug/net7.0/week1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sbeauvais/Desktop/truData/truData_Projects/engineering_internship/se_projects/week1/obj/Debug/net7.0/week1.AssemblyInfoInputs.cache
+/Users/sbeauvais/Desktop/truData/truData_Projects/engineering_internship/se_projects/week1/obj/Debug/net7.0/week1.AssemblyInfo.cs
+/Users/sbeauvais/Desktop/truData/truData_Projects/engineering_internship/se_projects/week1/obj/Debug/net7.0/week1.csproj.CoreCompileInputs.cache
+/Users/sbeauvais/Desktop/truData/truData_Projects/engineering_internship/se_projects/week1/obj/Debug/net7.0/week1.dll
+/Users/sbeauvais/Desktop/truData/truData_Projects/engineering_internship/se_projects/week1/obj/Debug/net7.0/refint/week1.dll
+/Users/sbeauvais/Desktop/truData/truData_Projects/engineering_internship/se_projects/week1/obj/Debug/net7.0/week1.pdb
+/Users/sbeauvais/Desktop/truData/truData_Projects/engineering_internship/se_projects/week1/obj/Debug/net7.0/week1.genruntimeconfig.cache
+/Users/sbeauvais/Desktop/truData/truData_Projects/engineering_internship/se_projects/week1/obj/Debug/net7.0/ref/week1.dll
