@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>APIs and Postman</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header" class="wrapper">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1><a href="#">APIs and Postman</a></h1>
+							<p>
+								In this section we will go over what an API is, how<br>
+								they work, and the different kinds of APIs that exist
+							</p>
+						</div>
+
+					<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li class="current">
+								<a href="#">Modules</a>
+								<ul>
+									<li><a href="what_is_a_software_engineer.html">What is a Software Engineer</a></li>
+									<li><a href="agile_azure_devops.html">Agile / Azure / DevOps</a></li>
+									<li><a href="OOP_encapsulation_polymorphism.html">OOP - Encapsulation & Polymorphism</a></li>
+									<li><a href="OOP_abstraction_inheritance.html">OOP - Inheritance & Abstraction</a></li>
+									<li><a href="software_architecture.html">Software Architectures</a></li>
+									<li><a href="apis.html">REST APIs / Postman</a></li>
+									<li><a href="#">Test Driven Development</a></li>
+									<li><a href="sql.html">SQL</a></li>
+									<li><a href="database_modeling.html">Databases</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Projects</a>
+								<ul>
+									<li><a href="se_proj_week1.html">SE Project Week 1</a></li>
+								</ul>
+							</li>
+							<!-- <li class="current"><a href="documents.html">Documents</a></li> -->
+						</ul>
+					</nav>
+
+				</section>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style2">
+					<div class="title"></div>
+					<div class="container">
+
+						<!-- Content -->
+							<div id="content">
+								<article class="box post">
+									<header class="style1">
+										<h2>What is an API</h2>
+										<p align="left" style="color:#545557;">
+											An Application Programming Interface or API for short, is how systems communicate with one
+											another without knowing about each other explicitly. They are a set of protocols for
+											building and integrating application software. Generally, APIs are a part of a server that receives
+											requests and sends responses. Most companies/websites have some kind of API available to the
+											public. However, it is possible for companies to have private APIs which do not allow public 
+											access. It is all dependent on the APIs security management.<br><br>
+											Applications that call APIs were traditionally written specific different programming languages. Web APIs
+											can be called through any programming language, but webpages created in HTML or application generator tools
+											can access them too.
+										</p><br>
+										<h2>How APIs Work</h2>
+										<p align="left" style="color:#545557;">
+											APIs are made of two related elements:<br>
+											- A specification that describes how information is exchanged between programs in the form of a request.<br>
+											- A software interface written to that specification and published in some way of use.<br>
+											Software that want to access what the API has to offer is said to call it, and the software tha creates
+											the API is said to publish it. APIs provide an audit trail whether it is a public, private, or partnered API
+											as you are required to have a token to access them. APIs have predefined roles that govern what service can
+											specifically be accessed and granted.
+										</p><br><br>
+										<h2>REST APIs</h2>
+										<p align="left" style="color:#545557;">
+											The most common architectures of APIs are Representational State Transfer (or REST) and Simple Object Access
+											Protocol (or SOAP). Here we will touch upon both, but will go into much further detail regarding REST
+											APIs. SOAP is a protocol that follows a strict standard to allow communication between the client and 
+											the server. REST on the other hand is an architectural style tha doesn't follow any strict standard but
+											follows six general constraints defined by Roy Fielding in his dissertation 
+											<a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf"><i>Architectural Styles and the Design of Network-based Software Architecture</i></a>.
+											In his disseration, Fielding states that a REST API must be:
+											<ul class="style3">
+												<li><strong>Uniform Interface</strong></li>
+												<p align="left" style="color:#545557;">
+													This constraint is core to the design of RESTful APIs and includes 4 facets:<br>
+													<strong>1. Resource identification in requests</strong><br>
+													<strong>2. Resource manipulation through representation</strong><br>
+													<strong>3. Self-descriptive messages returned have enough information to describe how the client to proceed</strong><br>
+													<strong>4. Hypertext is available</strong><br>
+												</p>
+												<li><strong>Client-Server Architecture</strong></li>
+												<p align="left" style="color:#545557;">
+													REST architecture is composed of clients, servers, and resources, and it handles requests
+													through HTTP.
+												</p>
+												<li><strong>Stateless</strong></li>
+												<p align="left" style="color:#545557;">
+													No client content is stored on the server between requests. Information about the session
+													state is, instead, held with the client.
+												</p>
+												<li><strong>Cacheable</strong></li>
+												<p align="left" style="color:#545557;">
+													Caching can eliminate the need for some client-server interactions.
+												</p>
+												<li><strong>Layered System</strong></li>
+												<p align="left" style="color:#545557;">
+													Client-server interactions can be mediated by additional layers. These layers could offer
+													additional features like load balancing, shared caches, or security.
+												</p>
+												<li><strong>Code on Demand</strong></li>
+												<p align="left" style="color:#545557;">
+													Servers can extend the functionality of a client by transferring executable code.
+												</p>
+											</ul>
+										</p><br>
+										<h2>RESTful Best Practices</h2>
+										<p align="left" style="color:#545557;">
+											Due to REST APIs being very flexible, this also bring up an easy point of error as the API can be designed
+											poorly which would result in the functionality being hindered. The OpenAPI Specification (OAS) established
+											that an interface for describing an API must have a way that allows any developer or application to discover
+											it and fully understand its parameters and capabilities. Another best practice when building an API is to
+											hash passwords and using HTTPS for secure data transmission.
+										</p><br>
+										<h2>Postman</h2>
+										<p align="left" style="color:#545557;">
+											Postman is used to disect, understand, and test REST APIs. It is an almost no code solution to understand other APIs functionality. 
+											An good example of how Postman could be implemented
+											is looking at testing a community API. If we are using a coding interface (in this case Flask), we would have
+											to write out a bunch of code to test a GET request. You would need to write a new route and function to test the request.
+											With Postman this process is all streamlined for users. You will need to enter the route address, enter and API key,
+											and select which kind of request you are testing.
+										</p>
+									</header>
+								</article>
+							</div>
+
+					</div>
+				</div>
+
+			<!-- links -->
+			<section id="highlights" class="wrapper style3">
+				<div class="title">Links</div>
+				<div class="container">
+					<div class="row aln-center">
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://www.redhat.com/en/topics/api/what-is-a-rest-api" class="image featured" target="_blank"><img src="images/thumbnails/redhat_logo.jpeg" alt="" height=180/></a>
+								<h3><a href="https://www.redhat.com/en/topics/api/what-is-a-rest-api" target="_blank">What is a REST API</a></h3>
+								<p>Article by RedHat</p>
+								<ul class="actions">
+									<li><a href="https://www.redhat.com/en/topics/api/what-is-a-rest-api" class="button style1" target="_blank">Read Article</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://www.ibm.com/topics/api" class="image featured" target="_blank"><img src="images/thumbnails/ibm_logo.jpeg" alt="" height=180/></a>
+								<h3><a href="https://www.ibm.com/topics/api" target="_blank">What is an API</a></h3>
+								<p>Article by IBM</p>
+								<ul class="actions">
+									<li><a href="https://www.ibm.com/topics/api" class="button style1" target="_blank">Read Article</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://www.digitalcrafts.com/blog/student-blog-what-postman-and-why-use-it" class="image featured" target="_blank"><img src="images/thumbnails/digitalcrafts_logo.jpeg" alt="" height=180/></a>
+								<h3><a href="https://www.digitalcrafts.com/blog/student-blog-what-postman-and-why-use-it" target="_blank">What is Postman</a></h3>
+								<p>Article by DigitalCrafts</p>
+								<ul class="actions">
+									<li><a href="https://www.digitalcrafts.com/blog/student-blog-what-postman-and-why-use-it" class="button style1" target="_blank">Read Article</a></li>
+								</ul>
+							</section>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- footer -->
+				<section id="footer" class="wrapper style3">
+					<a href = "https://www.trudatasolutions.com/" target="_blank">
+						<img src="images/thumbnails/tru_data_banner.jpg" style="display: block; margin-right: auto; margin-left: auto;">
+					</a>
+						<div id="copyright">
+							<ul>
+								<li>&copy; truData Solutions.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
