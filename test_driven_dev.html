@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Test Driven Development</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header" class="wrapper">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1><a href="#">Test Driven Development</a></h1>
+							<p>
+								In this section we will go over the Test Driven Development Process and how it<br>
+								benefits Agile in creating efficient and positive results in software development
+								
+							</p>
+						</div>
+
+					<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li class="current">
+								<a href="#">Modules</a>
+								<ul>
+									<li><a href="what_is_a_software_engineer.html">What is a Software Engineer</a></li>
+									<li><a href="agile_azure_devops.html">Agile / Azure / DevOps</a></li>
+									<li><a href="OOP_encapsulation_polymorphism.html">OOP - Encapsulation & Polymorphism</a></li>
+									<li><a href="OOP_abstraction_inheritance.html">OOP - Inheritance & Abstraction</a></li>
+									<li><a href="software_architecture.html">Software Architectures</a></li>
+									<li><a href="apis.html">REST APIs / Postman</a></li>
+									<li><a href="test_driven_dev.html">Test Driven Development</a></li>
+									<li><a href="#">SQL</a></li>
+									<li><a href="#">Databases</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Projects</a>
+								<ul>
+									<li><a href="#">SE Project</a></li>
+								</ul>
+							</li>
+							<!-- <li class="current"><a href="documents.html">Documents</a></li> -->
+						</ul>
+					</nav>
+
+				</section>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style2">
+					<div class="title"></div>
+					<div class="container">
+
+						<!-- Content -->
+							<div id="content">
+								<article class="box post">
+									<header class="style1">
+										<h2>What is Test Driven Development</h2>
+										<p align="left" style="color:#545557;">
+											Test Driven Development (TDD) is the process for software development practice of using unit tests
+											cases before developing actual code. It is an iterative approach combining programming, unit test
+											creation, and refactoring. In TDD, developers create small test cases for every feature based on 
+											their initial understanding. The primary intention of this technique is to modify or write new 
+											code only if the tests fail. This prevents duplication of test scripts.<br><br>
+
+											An example would be building a calculator function. When building a calculator function, a TDD 
+											approach would involve writing a test case for the “add” function and then writing the code for 
+											the process to pass that test. Once the “add” function is working correctly, additional test 
+											cases would be written for other functions such as “subtract”, “multiply” and “divide”.<br><br>
+
+											TDD differs from traditional code testing in that with TDD testing is done during development,
+											in traditional code testing all tests are conducted after the code is complete. TDD also has a
+											smaller testing scope because you are using unit test to test each individual function before it
+											is deployed. In traditional code testing you are testing the entire system.
+										</p><br>
+										<h2>Three Phases of TDD</h2>
+										<p align="left" style="color:#545557;">
+											In TDD, you will traditionally <strong>create precises tests</strong>, <strong>correct your code</strong>,
+											then <strong>refactor your code</strong>.<br><br>
+											<strong>Creating Precises Tests</strong><br>
+											Developers need to create exact unit tests to verify the functionality of specific features. 
+											They must ensure that the test compiles so that it can execute. In most cases, the test is bound 
+											to fail. This is a meaningful failure as developers create compact tests based on their assumptions 
+											of how the feature will behave.<br><br>
+
+											<strong>Correcting Your Code</strong><br>
+											Once a test fails, developers must make the minimal changes required to update the code to run 
+											successfully when re-executed.<br><br>
+
+											<strong>Refactoring Your Code</strong><br>
+											Once the test runs successfully, check for redundancy or any possible code optimizations to 
+											enhance overall performance. Ensure that refactoring does not affect the external behavior 
+											of the program.
+										</p>
+										<h2>Benefits of TDD</h2>
+										<p align="left" style="color:#545557;">
+											TDD fosters the creation og optimized code by breaking down the codebase into small piece and ensuring
+											correct functionality. It helps developers better analyze and understand client requirements and requests.
+											It is easier to add and test new functionality in later stages of development again due to each individual
+											piece being tested instead of the entire system. TDD focuses on creating tests for each functionality right 
+											from the beginning this enhances the productivity of the developer and leads to the development of 
+											a codebase that is flexible and easy to maintain.
+										</p><br><br>
+										<h2>Frameworks for TDD</h2>
+										<p align="left" style="color:#545557;">
+											Based on different programming languages, there are different frameworks available. For the .NET projects
+											you will use the csUnit and NUnit frameworks. Projects in python use the PyUnit and DocTest frameworks. Java
+											uses Junit or TestNG. There are also a few others, but this are the main contenders you will see in practice.
+										</p>
+									</header>
+								</article>
+							</div>
+
+					</div>
+				</div>
+
+			<!-- links -->
+			<section id="highlights" class="wrapper style3">
+				<div class="title">Links</div>
+				<div class="container">
+					<div class="row aln-center">
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://www.ibm.com/garage/method/practices/code/practice_test_driven_development/" class="image featured" target="_blank"><img src="images/thumbnails/ibm_logo.jpeg" alt="" height=180/></a>
+								<h3><a href="https://www.ibm.com/garage/method/practices/code/practice_test_driven_development/" target="_blank">Test Driven Development</a></h3>
+								<p>Article by IBM</p>
+								<ul class="actions">
+									<li><a href="https://www.ibm.com/garage/method/practices/code/practice_test_driven_development/" class="button style1" target="_blank">Read Article</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://www.techtarget.com/searchsoftwarequality/definition/test-driven-development" class="image featured" target="_blank"><img src="images/thumbnails/tt_logo.jpg" alt="" height=180/></a>
+								<h3><a href="https://www.techtarget.com/searchsoftwarequality/definition/test-driven-development" target="_blank">Test Driven Development (TDD)</a></h3>
+								<p>Article by TechTarget</p>
+								<ul class="actions">
+									<li><a href="https://www.techtarget.com/searchsoftwarequality/definition/test-driven-development" class="button style1" target="_blank">Read Article</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="https://nunit.org/" class="image featured" target="_blank"><img src="images/thumbnails/nunit_logo.jpeg" alt="" height=180/></a>
+								<h3><a href="https://nunit.org/" target="_blank">NUnit</a></h3>
+								<p>Official Webpage</p>
+								<ul class="actions">
+									<li><a href="https://nunit.org/" class="button style1" target="_blank">Read Documentation</a></li>
+								</ul>
+							</section>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- footer -->
+				<section id="footer" class="wrapper style3">
+					<a href = "https://www.trudatasolutions.com/" target="_blank">
+						<img src="images/thumbnails/tru_data_banner.jpg" style="display: block; margin-right: auto; margin-left: auto;">
+					</a>
+						<div id="copyright">
+							<ul>
+								<li>&copy; truData Solutions.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
